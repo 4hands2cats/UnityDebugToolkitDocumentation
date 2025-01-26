@@ -9,3 +9,4 @@
   - [FreeCam](features/freecam.md)
   - [Metrics](features/metrics.md)
 - [FAQ](faq.md)
+- [What's next](whatNext.md)
