@@ -10,3 +10,4 @@
   - [Metrics](features/metrics.md)
 - [FAQ](faq.md)
 - [What's next](whatNext.md)
+- [Patch Note](patchnote.md)
