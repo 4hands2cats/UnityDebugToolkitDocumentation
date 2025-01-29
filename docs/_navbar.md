@@ -1,2 +1,1 @@
-- [![Logo](https://via.placeholder.com/30)](/)
 - [Home](/)

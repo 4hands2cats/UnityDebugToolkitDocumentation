@@ -10,21 +10,25 @@
 </head>
 <body>
   <div id="app">Please wait...</div>
+
   <div class="nav-buttons">
     <button id="prevBtn" class="nav-btn">Previous</button>
     <button id="nextBtn" class="nav-btn">Next</button>
   </div>
+
   <script>
     window.$docsify = {
       name: 'UDT Documentation',
       repo: '',
+      logo: 'assets/logo.png',
       loadSidebar: true,
       loadNavbar: true,
-    }
+      loadFooter: true
+    };
   </script>
+
   <script src="//cdn.jsdelivr.net/npm/docsify/lib/docsify.min.js"></script>
+  <script src="//cdn.jsdelivr.net/npm/@alertbox/docsify-footer/dist/docsify-footer.min.js"></script>
 </body>
-<meta http-equiv='cache-control' content='no-cache'> 
-<meta http-equiv='expires' content='0'> 
-<meta http-equiv='pragma' content='no-cache'>
+
 </html>
