@@ -1,7 +1,7 @@
 - [Home](/)
 - Getting Started
   - [Introduction](getting-started/introduction.md)
-  - [Installation](getting-started/Installation.md)
+  - [Installation](getting-started/installation.md)
   - [Quick Start](getting-started/quick-start.md)
 - Features
   - [In Game Console](features/console.md)
