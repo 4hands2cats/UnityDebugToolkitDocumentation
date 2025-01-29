@@ -14,18 +14,18 @@ Like in any console you can use the top and bottom arrow of your keyboard to nav
 
 ### Simple
 - Type *help*/*Help*/*-h*/*-h* in the console to get a list of all the available commands.
-  
+
 ### Booleans
 - Type *metrics*/*Metrics*/*-m*/*-M* followed by *enable*/*e* or *disable*/*d* to enable or disable the metrics.
-  
+
 - Type *freecam*/*Freecam* followed by *enable* or *disable* to enable or disable the freecam.
 
 - Type *light*/*-l* followed by  *enable*/*e* or *disable*/*d* to enable or disable all the lights in the scene.
 
 - Type *shadows*/*-s* followed by  *enable*/*e* or *disable*/*d* to enable or disable all the shadows in the scene.
-  
+
 - Type *Collider*/*collider*/*-c*/*-C* followed by *enable*/*e* or *disable*/*d* to enable or disable the in game gizmos rendering for the collider (beware on large scene there might be a small freeze when enabling). This command also activates all the other in game gizmos [going to change in next version]
-  
+
 ### Vector
 - Type *Time*/*time*/*-t*/*-T* followed by a float value between 0 and 100 to change the time scale of your game.
 
