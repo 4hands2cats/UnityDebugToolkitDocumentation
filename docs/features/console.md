@@ -32,6 +32,6 @@ Like in any console you can use the top and bottom arrow of your keyboard to nav
 - Type *Frame*/*frame*/*-f*/*-F* followed by a float value x to navigate x frames in the future. [Note : If the number of x is too high you might wait a long time].
 
 ### Enum
-- Type *graphics*/*Graphics*/*-g*/*-G* followed by *low*/*l* or *medium*/*m* or *high*/*h* or *ultra*/*u* to change the quality settings. [Note : This scriptable object of this command will have to be changed if your quality settings are not following the standard ones of an URP project (verylow/low/medium/veryhigh/ultra)].
+- Type *graphics*/*Graphics*/*-g*/*-G* followed by *low*/*l* or *medium*/*m* or *high*/*h* or *ultra*/*u* to change the quality settings. [Note : This scriptable object of this command will have to be changed if your quality settings are not following the standard ones of an URP project (*verylow/low/medium/veryhigh/ultra*)].
 
 ## Debugs logs

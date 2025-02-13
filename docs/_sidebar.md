@@ -2,6 +2,7 @@
 - Getting Started
   - [Introduction](getting-started/introduction.md)
   - [Installation](getting-started/installation.md)
+  - [DemoSceneTour](getting-started/demo.md)
   - [Quick Start](getting-started/quick-start.md)
 - Features
   - [In Game Console](features/console.md)
