@@ -9,6 +9,10 @@
   - [Gizmos](features/gizmos.md)
   - [FreeCam](features/freecam.md)
   - [Metrics](features/metrics.md)
+- APIs
+  - [Gizmos API](apis/api_gizmos.md)
+- Customization
+  - [Make your own commands](customization/custom_commands.md)
 - [FAQ](faq.md)
 - [What's next](whatNext.md)
 - [Patch Note](patchnote.md)

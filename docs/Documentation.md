@@ -38,12 +38,26 @@ Get into the unity package manager at the top of the Unity Engine window and loo
 Click on the **download** button at the bottom right of the menu.
 
 Once the files are downloaded, import them in your project by clicking on the **Import** button.
+
+The toolkit is in the 4Hands2Cats folder. In the future if we do more assets they'll install in this folder as well.
+
+![alt text](../assets/AssetInFolder.png)
 # Quick start guide
 
-To add the debug fonctionalities to your scene 
+As you just seen in the demo scene, the toolkit is pretty simple to include in your project. You just have to drag and drop the **UDTConsole-Canvas** prefab from the prefab folder inside your scene. 
+
+![alt text](../assets/UDTCanvas.png)
+
+Don't forget to remove it for production builds. 
 # Demo Scene Tour
 
 The demo scene is based on the third person template of Unity. We've added our debug toolkit in this scene.
+
+![alt text](../assets/DemoScene.png)
+
+To use this demo scene just press play. The Console and the all the other features are on the **F12** key. 
+
+To navigate in the scene use the **WSDQ** keys and the mouse to control the camera. 
 # Console
 
 The In-game console is the central piece of UDT. It controls every features of the toolkit and more.
@@ -71,6 +85,8 @@ Like in any console you can use the top and bottom arrow of your keyboard to nav
 - Type *shadows*/*-s* followed by  *enable*/*e* or *disable*/*d* to enable or disable all the shadows in the scene.
 
 - Type *Collider*/*collider*/*-c*/*-C* followed by *enable*/*e* or *disable*/*d* to enable or disable the in game gizmos rendering for the collider (beware on large scene there might be a small freeze when enabling). This command also activates all the other in game gizmos [going to change in next version]
+- 
+- Type *Gizmos*/*gizmos*/*-g*/*-G* followed by *enable*/*e* or *disable*/*d* to enable or disable the in game gizmos.
 
 ### Vector
 - Type *Time*/*time*/*-t*/*-T* followed by a float value between 0 and 100 to change the time scale of your game.
@@ -82,13 +98,79 @@ Like in any console you can use the top and bottom arrow of your keyboard to nav
 
 ## Debugs logs
 # Free Cam
+
+The free cam is here to give you a tool that's similar to the navigation in the scene panel of unity, but at runtime. 
+
+To use type *freecam*/*Freecam* followed by *enable* or *disable* to enable or disable the freecam in the console after opening it using **F12**. 
+
+Though this embeded in the package, the freecam comes as stand alone feature. Feel free to use it for your gameplay if you want. 
+
+> Future versions of the cam should be compatible with cinemachine. 
+
+The prefab for this one is in the same folder as the console.  
+
+![alt text](../assets/FreeCam.png)
+
+To use as a stand alone feature just drag and drop the prefab in your scene.
+
+> Note : If you use it as stand alone feature it'll not be control anymore by the console.
 # Gizmos
+As you now there is already an API in unity to draw gizmos for debugging purposes. But you cannot draw gizmos for run time. Those gizmos are harvesting the power of the **GL** API to show performance friendly gizmos at runtime for quite anything. 
+
+There are two way of using the gizmos. Manual and automatic using the console. 
+
+- The manual way consist of adding the gizmos components to your gameobjects
+- The automatic way is used to show all colliders in the scene. To show all colliders simple type the command : *Collider*/*collider*/*-c*/*-C* followed by *enable*/*e* or *disable*/*d* to enable or disable the in game gizmos rendering for the collider (beware on large scene there might be a small freeze when enabling). This command also activates all the other in game gizmos [going to change in next version] int the ingame console.
+
+Gizmos that are manually setted up can are still managed by the ingame console. Simple type : *Gizmos*/*gizmos*/*-g*/*-G* followed by *enable*/*e* or *disable*/*d* to enable or disable the in game gizmos.
+
+> Note : this commands would also hide the collider gizmos. We are awaiting for you feedback to improve this feature. 
+
+To set up a Gizmos as component simple add the choosen Gizmos to your gameobject.
+
+![alt text](../assets/AddGizmos.png)
+
+____
+Use the gizmos Collider to choose show a collider like shape. 
+
+![alt text](../assets/ColliderGizmos.png)
+
+There are four options : 
+- The **Box**, that you can control using the **Size** and the **Center** parameters
+- The **Sphere**, that you can control using the **Radius** and the **Center** parameters
+- The **Capsule**, that you can use using the **Radius**, the **Center** and the **Height** parameters
+- The **Mesh**, that you can use by drag and dropping a mesh in the mash container of the gameObject. [To enable this feature you need to enable Read/Write on your meshes in the import settings].
+
+> Note that those gizmos support bloom and they can be used as part of your project for other purposes than debugging.
+
+____
+Use the Gizmos Raycast component to draw a Ray cast.
+
+![alt text](../assets/GizmosRaycast.png)
+
+There are some direction preset for all the cartesian direction (up, left, etc...) but you can use custom to choose your own direction. 
+
+____
+Use the Gizmos Raycast To component to draw a gizmos between two targets.
+
+![alt text](../assets/GizmosRaycastTo.png)
+
+You just have to give it a ref to a gameobject and it'll draw a ray to it and update the ray at everyframes.
+
+___
+We are planning on adding custom editors in the future to simplify the usage of those features. Please take a look at the section [Gizmos API](../apis/api_gizmos.md) to learn about the code API for the gizmos.
 # Metrics
 
 The metrics are enabled using the interactive console with the command :
 > *metrics*/*Metrics*/*-m*/*-M* followed by *enable*/*e* or *disable*/*d* to enable or disable the metrics.
 
 For now it show the FPS, the number of batches, the number of tris and the number of vert. In future updates it'll help you to do some profiling.
+
+You can use the metrics as a stand alone feature by drag and dropping it in your scene. 
+
+![alt text](../assets/Metrics.png)
+
+> Note : If you use the metrics as a standalone feature, it'll note be managed by the console anymore.
 # About us
 
 At 4Hands2cats, we create debugging tools to streamline development. As two devs (and two cats), we focus on robust, user-friendly solutions for Unity. Our first asset, a complete debug toolkit, works in build and runtime for full control. We're committed to improving and expanding our tools.

@@ -1,3 +1,7 @@
 # Quick start guide
 
-To add the debug fonctionalities to your scene 
+As you just seen in the demo scene, the toolkit is pretty simple to include in your project. You just have to drag and drop the **UDTConsole-Canvas** prefab from the prefab folder inside your scene. 
+
+![alt text](../assets/UDTCanvas.png)
+
+Don't forget to remove it for production builds. 
