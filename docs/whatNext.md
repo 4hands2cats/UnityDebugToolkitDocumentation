@@ -2,6 +2,7 @@
 
 ## Usability 
 - Custom inspector for all components 
+- Completing the Gizmos API
 
 ## Features
 - A cinemachine freeCam
@@ -9,6 +10,9 @@
 - A way to create your own commands using a code API.
 - An implementation of the gizmos tool to read the navmesh AI agent pathing.
 - A way to print the logs and the metrics to send them to an adress or post process the result using a spreadshit.
+- 2D support for colliders 
+- Mobile device support for the console.
+- VR/XR support for the console.
 
 ## Known issues
 Awaiting for your feedbacks

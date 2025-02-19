@@ -9,6 +9,7 @@ The current version of the toolkit 1.0.
 
 If you are looking for the last patch note please check the [Patch Notes](patchnote.md).
 If you are looking for features in development take a look at the [What's Next](whatNext.md) section.
+[Discord](https://discord.gg/8M5q85Ea) 
 ___
 ## Features
 UDT is composed of four elements : 
