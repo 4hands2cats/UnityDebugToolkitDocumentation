@@ -1,22 +1,27 @@
 # Debug Toolkit for Unity (UDT)
 
 > Thanks for using the UDT.
-Unity 6+ is supported for this asset. 
+> Unity 6+ is supported for this asset.
 
-This documentation aims to get you ready to use and modify UDT for your awesome projects. 
+This documentation aims to get you ready to use and modify UDT for your awesome projects.
 
 The current version of the toolkit 1.0.
 
 If you are looking for the last patch note please check the [Patch Notes](patchnote.md).
 If you are looking for features in development take a look at the [What's Next](whatNext.md) section.
-[Discord](https://discord.gg/8M5q85Ea) 
-___
+[Discord](https://discord.gg/8M5q85Ea)
+
+---
+
 ## Features
-UDT is composed of four elements : 
+
+UDT is composed of many elements :
+
 - A modular console, for which can create custom commands but also log anything you want at runtime. Maybe you wish to have a simple way to kill your player, teleport to some place, show all the colliders that are in the scene or maybe you want to go frame by frame to know what is happening. Now its a simple command line.
 - A system of optimized runtime Gizmos with an easy to use API. It makes your debugging way easier. Control them with the console, or as a standalone feature.
 - A FreeCam to inspect your scene at runtime. With a simple command in the console activate or deactivate the FreeCam and navigate through your scene.
 - A metrics system to now your fps, the number of batches, and your tris/vert usage.
+- A runtime navmesh debugger.
 # Introduction to UDT
 
 This toolkit aims to make your life easier while debugging your game.\
@@ -73,31 +78,69 @@ There is a set of built in commands that you can use to control the toolkit and 
 
 Like in any console you can use the top and bottom arrow of your keyboard to navigate through the command you've already written.
 
-### Simple
-- Type *help*/*Help*/*-h*/*-h* in the console to get a list of all the available commands.
+Each feature has its family of commands.
 
-### Booleans
-- Type *metrics*/*Metrics*/*-m*/*-M* followed by *enable*/*e* or *disable*/*d* to enable or disable the metrics.
+### Help
 
-- Type *freecam*/*Freecam* followed by *enable* or *disable* to enable or disable the freecam.
+```Debug Toolkit Command
+    help : To show how to use everycommpands in the toolkit
+```
 
-- Type *light*/*-l* followed by  *enable*/*e* or *disable*/*d* to enable or disable all the lights in the scene.
+### Metrics
+```Debug Toolkit Command
+    metrics enable/disable : To show or hide the metrics
+```
 
-- Type *shadows*/*-s* followed by  *enable*/*e* or *disable*/*d* to enable or disable all the shadows in the scene.
+### Freecam
+```Debug Toolkit Command
+    freecam enable/disable : To use the frecam. (It instantiate the cam and deletes it)
+```
 
-- Type *Collider*/*collider*/*-c*/*-C* followed by *enable*/*e* or *disable*/*d* to enable or disable the in game gizmos rendering for the collider (beware on large scene there might be a small freeze when enabling). This command also activates all the other in game gizmos [going to change in next version]
-- 
-- Type *Gizmos*/*gizmos*/*-g*/*-G* followed by *enable*/*e* or *disable*/*d* to enable or disable the in game gizmos.
+### Lighting
+```Debug Toolkit Command
+    light enable/disable : to toggle the directional light.
+```
 
-### Vector
-- Type *Time*/*time*/*-t*/*-T* followed by a float value between 0 and 100 to change the time scale of your game.
+### Shadows
+```Debug Toolkit Command
+    shadows enable/disable : to toggle the shadows.
+```
 
-- Type *Frame*/*frame*/*-f*/*-F* followed by a float value x to navigate x frames in the future. [Note : If the number of x is too high you might wait a long time].
+### Collider 
+```Debug Toolkit Command
+    collider enable/disable : to show all the collider or hide them all (This cost a lot on big scenes)
+```
 
-### Enum
-- Type *graphics*/*Graphics*/*-g*/*-G* followed by *low*/*l* or *medium*/*m* or *high*/*h* or *ultra*/*u* to change the quality settings. [Note : This scriptable object of this command will have to be changed if your quality settings are not following the standard ones of an URP project (*verylow/low/medium/veryhigh/ultra*)].
+### Gizmos
+```Debug Toolkit Command
+    gizmos enable/disable : to show all gizmos or not
+```
 
-## Debugs logs
+### Navmesh debug
+```Debug Toolkit Command
+    navA gizmos enable/disable : To draw the gizmos of the navAgent pathing
+
+    navA info enable/disable : To show the info about the pathing of the navAgent
+
+    navA all enable/disable : To activate all commands
+```
+
+### Time
+```Debug Toolkit Command
+    time 0-100 : to set the time scale. Note that the value can be between 0 and 100.
+
+    frame 0-100 : to jump to a frame. Do you wish to pause in exactly 42 frames? Now you can.
+```
+
+### Graphism
+```Debug Toolkit Command
+    graphics low/medium/high/ultra : to change the quality of the graphisme. 
+```
+>[Note : The scriptable object of this command will have to be changed if your quality settings are not following the standard ones of an URP project (*verylow/low/medium/veryhigh/ultra*)].
+
+## Log in the console only
+
+There is an API to log in the in-game console only. Go in the section [Console](apis/console.md) to discover how to use it. Don't forget that the logs from Unity are retargeted to the console anyway.
 # Free Cam
 
 The free cam is here to give you a tool that's similar to the navigation in the scene panel of unity, but at runtime. 
@@ -172,21 +215,151 @@ You can use the metrics as a stand alone feature by drag and dropping it in your
 ![alt text](../assets/Metrics.png)
 
 > Note : If you use the metrics as a standalone feature, it'll note be managed by the console anymore.
-# Gizmos Api
+# NavMesh Debugging
 
+This functionality allows to debug the navmesh at runtime. 
+
+To use : there are 3 commands available in the interactive console.
+
+
+```Debug Toolkit Command
+    navA gizmos enable/disable : To draw the gizmos of the navAgent pathing
+
+    navA info enable/disable : To show the info about the pathing of the navAgent
+
+    navA all enable/disable : To activate all commands
+```
+
+This features cannot be used as a standalone yet.
+
+
+> Note : Do not hesitate to request more features for the navmesh debbuging.
+# Code APIs
+
+In this section you'll learn how to use the different components of the toolkit in your scripts.
+
+> Many functionalities are going to be added to the APIs of the different component over time. Stay tuned.
+
+## Gizmos 
 You can create and delete gizmos at runtime using the Gizmos API.
 > Note : this APIs might change depending on your feedback. Make sure to come back to this section if your logic breaks. 
 
-For now there only is an API for the Collider Gizmos, but we are planing on completing this so you can use it for raycasts to.
+For this version there only is API for the Collider Gizmos and the RaycastTo Gizmos.
 
-![alt text](../assets/GizmosApi.png)
+> Feel free to request API features.
+> If you make your own please show them to us, maybe they could be integrated in the toolkit.
 
-You've got four static methods to work with. The first argument is always the game object you wish to add the Gizmos Collider to. The second argument is the corresponding Unity Engine collider component and the third one is the color you wish to use. 
+## Console
+You can use the **DebugLog** API of the in-game console to print logs in the in-game console directly.
+# Collider Gizmos
 
-The Gizmos will spawn at the position of the collider and look exactly the same, but will work at runtime.
+The collider Gizmos is composed of four static method. You can use them anywhere to make your own instances the gizmos, and draw your own shape based on a collider. 
+
+- The **targetObject** is the gameObject on which your gizmos drawer is going to be instantiated.
+- The second parameter is a **collider**. 
+- The third is the **color** you want to draw with.
+
+```csharp
+    public static Gizmo_Collider DrawBoxGizmos(GameObject targetObject, BoxCollider boxCollider, Color colliderColor)
+    {
+        // Logic
+    }
+
+    public static Gizmo_Collider DrawSphereGizmos(GameObject gameObject, SphereCollider sphereCollider, Color gizmosColor)
+    {
+        // Logic
+    }
+
+    public static Gizmo_Collider DrawCapsuleGizmos(GameObject gameObject, CapsuleCollider capsuleCollider, Color gizmosColor)
+    {
+        // Logic
+    }
+
+    public static Gizmo_Collider DrawMeshGizmos(GameObject gameObject, MeshCollider meshCollider, Color gizmosColor)
+    {
+        // Logic
+    }
+```
+
+In addition to this API you can use the **DrawBox** method to repurpose the drawer to draw any box, anywhere.
+- The first parameter is the **size** corresponds to the size of your box.
+- The second parameter is the **center** corresponds to the position of the box relative to the position of the drawer.
+- The third is the **color** you want to draw with.
+
+```csharp
+    public void DrawBox(Vector3 size, Vector3 center, Color color)
+    {
+        // Logic
+    }
+```
+
 
 ___ 
-We plan on completing this API, and 2d collider support. 
+> We plan on completing this API with way more functionalities.
+> We also plan to add support for 2d collider support. 
+# RaycastTo Gizmos
+
+This component has a simple API for now. 
+Notice that for now it always draw from the position of the drawer to another position. If you need a feature to draw from a selected position to another one, please ask on the discord.
+
+Those methods are pretty simple to come around. Either pass a GameObject or a position you want to draw to an then choose the color.
+
+```csharp
+    public void DrawTo(GameObject target, Color color)
+    {
+        // Logic
+    }
+
+    public void DrawTo(Vector3 targetPosition, Color color)
+    {
+        // Logic
+    }
+```
+# Console API
+
+The console has an API that passes through the **DebugLog** static class.
+
+```csharp
+public static void Log(int i, LogColor logColor = LogColor.Default, LogType logType = LogType.Log)
+{
+    //Logic
+}
+
+public static void Log(bool b, LogColor logColor = LogColor.Default, LogType logType = LogType.Log)
+{
+    //Logic
+}
+
+public static void Log(string message, LogColor logColor = LogColor.Default, LogType logType = LogType.Log)
+{
+    //Logic
+}
+```
+- The first parameter is always what you wish to print. 
+- The second parameter is the color that you can select from a pre selected set of colors : 
+```csharp
+    public enum LogColor
+    {
+        Default, /// color of the log type
+        Red,
+        Green,
+        Blue,
+        Yellow,
+        White
+    }
+```
+- The third parameter is the log type. Each log type has a predefined color. This color can be overridden by selecting another color then default : 
+```csharp
+    public enum LogType
+    {
+        Log, //white
+        Warning, // orange
+        Error, // red
+        Command // blue
+    }
+```
+
+> For know only **int**, **bool** and **string** are supported, but feel free to request more functionalities.
 # Make your own commands
 
 The command system is based on scriptable objects. Scriptables object are really practical to use because they are Gameobject and scene agnostic.
@@ -245,32 +418,59 @@ At 4Hands2cats, we create debugging tools to streamline development. As two devs
 **Where can I contact you to send you feedback or request some features ?**
 
     - Just come on the discord server and ask your question on the dedicated channel.
-# What's next ? 
+# What's next ?
 
-## Usability 
-- Custom inspector for all components 
+## Usability
+
+- Custom inspector for all components
 - Completing the Gizmos API
+- A system based on C# attributes to make your own commands directly in code while keeping the scriptable object work flow.
+- Command auto-completion
 
 ## Features
+
 - A cinemachine freeCam
 - Profiling features
 - A way to create your own commands using a code API.
-- An implementation of the gizmos tool to read the navmesh AI agent pathing.
 - A way to print the logs and the metrics to send them to an adress or post process the result using a spreadshit.
-- 2D support for colliders 
+- 2D support for colliders
 - Mobile device support for the console.
 - VR/XR support for the console.
 
 ## Known issues
+
 Awaiting for your feedbacks
 
-___
+---
+
 Is there a feature you need? Feel free to ask on the dedicated discord server and we'll see what we can do. Our goal is to improve this asset as much as possible so it fullfills all your needs in term of debuging in your Unity Engine journey.
 # Patch Note
+
 This section is the log of all the changes and additions to UDT since release.
 
-## V 1.0
-UDT Release : 
+## V 1.1.0
+### Features
+- Adds a runtime gizmos debug mode for the navmesh agents
+- Adds a runtime worldspace info UI for the navmesh agents
+
+### Quality of life improvement
+- More API for the Gizmos_RaycastTo component.
+- More API for the Gizmos_Collider
+- New icon for the scriptable objects of the commands
+- Simplifies the way the commands have to be made
+
+### Fix
+- Fixies an issue where an empty string would throw an error
+- Fixies an issue where the console text area would sometime bug out when increasing too
+fast in size.
+- Fixies an issue where having a space at the end of a command would fail its process.
+- Fixies a bug where multi keyword commands would not always work.
+- Improves performance of the interactive console.
+
+## V 1.0.0
+
+### UDT Release :
+
 - In game Console
 - In game gizmos
 - In game FreeCam

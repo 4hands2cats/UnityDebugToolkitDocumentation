@@ -9,8 +9,11 @@
   - [Gizmos](features/gizmos.md)
   - [FreeCam](features/freecam.md)
   - [Metrics](features/metrics.md)
-- APIs
-  - [Gizmos API](apis/api_gizmos.md)
+  - [NavMesh](features/navmesh.md)
+- [APIs](apis/apis.md)
+  - [Collider Gizmos](apis/collider_gizmos.md)
+  - [RaycastTo Gizmos](apis/raycastTo_gizmos.md)
+  - [Console](apis/console.md)
 - Customization
   - [Make your own commands](customization/custom_commands.md)
 - [FAQ](faq.md)

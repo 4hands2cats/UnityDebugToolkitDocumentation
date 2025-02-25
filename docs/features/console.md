@@ -12,28 +12,66 @@ There is a set of built in commands that you can use to control the toolkit and 
 
 Like in any console you can use the top and bottom arrow of your keyboard to navigate through the command you've already written.
 
-### Simple
-- Type *help*/*Help*/*-h*/*-h* in the console to get a list of all the available commands.
+Each feature has its family of commands.
 
-### Booleans
-- Type *metrics*/*Metrics*/*-m*/*-M* followed by *enable*/*e* or *disable*/*d* to enable or disable the metrics.
+### Help
 
-- Type *freecam*/*Freecam* followed by *enable* or *disable* to enable or disable the freecam.
+```Debug Toolkit Command
+    help : To show how to use everycommpands in the toolkit
+```
 
-- Type *light*/*-l* followed by  *enable*/*e* or *disable*/*d* to enable or disable all the lights in the scene.
+### Metrics
+```Debug Toolkit Command
+    metrics enable/disable : To show or hide the metrics
+```
 
-- Type *shadows*/*-s* followed by  *enable*/*e* or *disable*/*d* to enable or disable all the shadows in the scene.
+### Freecam
+```Debug Toolkit Command
+    freecam enable/disable : To use the frecam. (It instantiate the cam and deletes it)
+```
 
-- Type *Collider*/*collider*/*-c*/*-C* followed by *enable*/*e* or *disable*/*d* to enable or disable the in game gizmos rendering for the collider (beware on large scene there might be a small freeze when enabling). This command also activates all the other in game gizmos [going to change in next version]
-- 
-- Type *Gizmos*/*gizmos*/*-g*/*-G* followed by *enable*/*e* or *disable*/*d* to enable or disable the in game gizmos.
+### Lighting
+```Debug Toolkit Command
+    light enable/disable : to toggle the directional light.
+```
 
-### Vector
-- Type *Time*/*time*/*-t*/*-T* followed by a float value between 0 and 100 to change the time scale of your game.
+### Shadows
+```Debug Toolkit Command
+    shadows enable/disable : to toggle the shadows.
+```
 
-- Type *Frame*/*frame*/*-f*/*-F* followed by a float value x to navigate x frames in the future. [Note : If the number of x is too high you might wait a long time].
+### Collider 
+```Debug Toolkit Command
+    collider enable/disable : to show all the collider or hide them all (This cost a lot on big scenes)
+```
 
-### Enum
-- Type *graphics*/*Graphics*/*-g*/*-G* followed by *low*/*l* or *medium*/*m* or *high*/*h* or *ultra*/*u* to change the quality settings. [Note : This scriptable object of this command will have to be changed if your quality settings are not following the standard ones of an URP project (*verylow/low/medium/veryhigh/ultra*)].
+### Gizmos
+```Debug Toolkit Command
+    gizmos enable/disable : to show all gizmos or not
+```
 
-## Debugs logs
+### Navmesh debug
+```Debug Toolkit Command
+    navA gizmos enable/disable : To draw the gizmos of the navAgent pathing
+
+    navA info enable/disable : To show the info about the pathing of the navAgent
+
+    navA all enable/disable : To activate all commands
+```
+
+### Time
+```Debug Toolkit Command
+    time 0-100 : to set the time scale. Note that the value can be between 0 and 100.
+
+    frame 0-100 : to jump to a frame. Do you wish to pause in exactly 42 frames? Now you can.
+```
+
+### Graphism
+```Debug Toolkit Command
+    graphics low/medium/high/ultra : to change the quality of the graphisme. 
+```
+>[Note : The scriptable object of this command will have to be changed if your quality settings are not following the standard ones of an URP project (*verylow/low/medium/veryhigh/ultra*)].
+
+## Log in the console only
+
+There is an API to log in the in-game console only. Go in the section [Console](apis/console.md) to discover how to use it. Don't forget that the logs from Unity are retargeted to the console anyway.

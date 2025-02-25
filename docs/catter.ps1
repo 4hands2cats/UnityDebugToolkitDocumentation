@@ -6,7 +6,11 @@ Get-Content README.md, getting-started/introduction.md, `
     features/freecam.md, `
     features/gizmos.md, `
     features/metrics.md, `
-    apis/api_gizmos.md, `
+    features/navmesh.md, `
+    apis/apis.md, `
+    apis/collider_gizmos.md, `
+    apis/raycastTo_gizmos.md, `
+    apis/console.md, `
     customization/custom_commands.md, `
     about.md, faq.md, whatNext.md, patchnote.md | Set-Content Documentation.md
 
