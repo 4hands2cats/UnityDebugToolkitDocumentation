@@ -75,3 +75,5 @@ You can find this script in the sample folder.
 ```
 
 > There is no support yet for non-static methods but its doable. If you feel like you are needing those, just contact us on the discord.
+
+> If you are wondering how it works behind the scene don't hesitate to contact us :D
