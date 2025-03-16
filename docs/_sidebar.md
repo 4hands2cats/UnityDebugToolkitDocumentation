@@ -16,6 +16,7 @@
   - [Console](apis/console.md)
 - Customization
   - [Make your own commands](customization/custom_commands.md)
+  - [Static Commands](customization/staticCommands.md)
 - [FAQ](faq.md)
 - [What's next](whatNext.md)
 - [Patch Note](patchnote.md)
