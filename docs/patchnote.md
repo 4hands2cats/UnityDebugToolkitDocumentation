@@ -2,6 +2,19 @@
 
 This section is the log of all the changes and additions to UDT since release.
 
+## V1.2.0
+### Features
+- Adds Commands for static functions as code attributes
+- Adds Metrics graphic plot 
+- Adds metrics for audio and memory usage
+
+### Improvements
+- More icons for the scripts of the plugin
+- Performance improvements
+- Console navigation improvement
+
+
+
 ## V 1.1.0
 ### Features
 - Adds a runtime gizmos debug mode for the navmesh agents
