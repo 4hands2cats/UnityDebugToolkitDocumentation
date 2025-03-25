@@ -12,6 +12,7 @@ Get-Content README.md, getting-started/introduction.md, `
     apis/raycastTo_gizmos.md, `
     apis/console.md, `
     customization/custom_commands.md, `
+    customization/staticCommands.md, `
     about.md, faq.md, whatNext.md, patchnote.md | Set-Content Documentation.md
 
 md-to-pdf Documentation.md
