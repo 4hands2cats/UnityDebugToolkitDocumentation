@@ -141,252 +141,6 @@ Each feature has its family of commands.
 ## Log in the console only
 
 There is an API to log in the in-game console only. Go in the section [Console](apis/console.md) to discover how to use it. Don't forget that the logs from Unity are retargeted to the console anyway.
-# Free Cam
-
-The free cam is here to give you a tool that's similar to the navigation in the scene panel of unity, but at runtime. 
-
-To use type *freecam*/*Freecam* followed by *enable* or *disable* to enable or disable the freecam in the console after opening it using **F12**. 
-
-Though this embeded in the package, the freecam comes as stand alone feature. Feel free to use it for your gameplay if you want. 
-
-> Future versions of the cam should be compatible with cinemachine. 
-
-The prefab for this one is in the same folder as the console.  
-
-![alt text](../assets/FreeCam.png)
-
-To use as a stand alone feature just drag and drop the prefab in your scene.
-
-> Note : If you use it as stand alone feature it'll not be control anymore by the console.
-# Gizmos
-As you now there is already an API in unity to draw gizmos for debugging purposes. But you cannot draw gizmos for run time. Those gizmos are harvesting the power of the **GL** API to show performance friendly gizmos at runtime for quite anything. 
-
-There are two way of using the gizmos. Manual and automatic using the console. 
-
-- The manual way consist of adding the gizmos components to your gameobjects
-- The automatic way is used to show all colliders in the scene. To show all colliders simple type the command : *Collider*/*collider*/*-c*/*-C* followed by *enable*/*e* or *disable*/*d* to enable or disable the in game gizmos rendering for the collider (beware on large scene there might be a small freeze when enabling). This command also activates all the other in game gizmos [going to change in next version] int the ingame console.
-
-Gizmos that are manually setted up can are still managed by the ingame console. Simple type : *Gizmos*/*gizmos*/*-g*/*-G* followed by *enable*/*e* or *disable*/*d* to enable or disable the in game gizmos.
-
-> Note : this commands would also hide the collider gizmos. We are awaiting for you feedback to improve this feature. 
-
-To set up a Gizmos as component simple add the choosen Gizmos to your gameobject.
-
-![alt text](../assets/AddGizmos.png)
-
-____
-Use the gizmos Collider to choose show a collider like shape. 
-
-![alt text](../assets/ColliderGizmos.png)
-
-There are four options : 
-- The **Box**, that you can control using the **Size** and the **Center** parameters
-- The **Sphere**, that you can control using the **Radius** and the **Center** parameters
-- The **Capsule**, that you can use using the **Radius**, the **Center** and the **Height** parameters
-- The **Mesh**, that you can use by drag and dropping a mesh in the mash container of the gameObject. [To enable this feature you need to enable Read/Write on your meshes in the import settings].
-
-> Note that those gizmos support bloom and they can be used as part of your project for other purposes than debugging.
-
-____
-Use the Gizmos Raycast component to draw a Ray cast.
-
-![alt text](../assets/GizmosRaycast.png)
-
-There are some direction preset for all the cartesian direction (up, left, etc...) but you can use custom to choose your own direction. 
-
-____
-Use the Gizmos Raycast To component to draw a gizmos between two targets.
-
-![alt text](../assets/GizmosRaycastTo.png)
-
-You just have to give it a ref to a gameobject and it'll draw a ray to it and update the ray at everyframes.
-
-___
-We are planning on adding custom editors in the future to simplify the usage of those features. Please take a look at the section [Gizmos API](../apis/api_gizmos.md) to learn about the code API for the gizmos.
-# Metrics
-
-The metrics are enabled using the interactive console with the command :
-> *metrics*/*Metrics*/*-m*/*-M* followed by *enable*/*e* or *disable*/*d* to enable or disable the metrics.
-
-![alt text](../assets/Metrics_0.png)
-
-The Graphics section displays the FPS and the time elapsed since the last frame.
-It also shows the time spent by the Main thread and a breakdown of the time taken by the Render thread. The graph represents the time spent by the main thread, targeting 120 FPS.
-Additionally, this section includes:
-
-    The number of batches
-    The number of triangles
-    The number of vertices
-    The number of SetPass calls
-    The number of draw calls
-    The number of shadow casters
-    The number of visible skinned meshes
-
-The Memory section displays the total memory usage across:
-
-    Engine
-    System
-    Video
-    Audio
-    Garbage collection
-
-The Audio section shows the current audio level.
-
-To adjust the update rate of the metrics, modify the Update Delta Time parameter in the metrics prefab:
-
-    Increase the value to reduce the update frequency.
-    Decrease the value to increase the update frequency.
-
-You can use the metrics as a stand alone feature by drag and dropping it in your scene. 
-
-![alt text](../assets/Metrics_1.png)
-
-> Note : If you use the metrics as a standalone feature, it'll not be managed by the console anymore.
-# NavMesh Debugging
-
-This functionality allows to debug the navmesh at runtime. 
-
-To use : there are 3 commands available in the interactive console.
-
-
-```Debug Toolkit Command
-    navA gizmos enable/disable : To draw the gizmos of the navAgent pathing
-
-    navA info enable/disable : To show the info about the pathing of the navAgent
-
-    navA all enable/disable : To activate all commands
-```
-
-This features cannot be used as a standalone yet.
-
-
-> Note : Do not hesitate to request more features for the navmesh debbuging.
-# Code APIs
-
-In this section you'll learn how to use the different components of the toolkit in your scripts.
-
-> Many functionalities are going to be added to the APIs of the different component over time. Stay tuned.
-
-## Gizmos 
-You can create and delete gizmos at runtime using the Gizmos API.
-> Note : this APIs might change depending on your feedback. Make sure to come back to this section if your logic breaks. 
-
-For this version there only is API for the Collider Gizmos and the RaycastTo Gizmos.
-
-> Feel free to request API features.
-> If you make your own please show them to us, maybe they could be integrated in the toolkit.
-
-## Console
-You can use the **DebugLog** API of the in-game console to print logs in the in-game console directly.
-# Collider Gizmos
-
-The collider Gizmos is composed of four static method. You can use them anywhere to make your own instances the gizmos, and draw your own shape based on a collider. 
-
-- The **targetObject** is the gameObject on which your gizmos drawer is going to be instantiated.
-- The second parameter is a **collider**. 
-- The third is the **color** you want to draw with.
-
-```csharp
-    public static Gizmo_Collider DrawBoxGizmos(GameObject targetObject, BoxCollider boxCollider, Color colliderColor)
-    {
-        // Logic
-    }
-
-    public static Gizmo_Collider DrawSphereGizmos(GameObject gameObject, SphereCollider sphereCollider, Color gizmosColor)
-    {
-        // Logic
-    }
-
-    public static Gizmo_Collider DrawCapsuleGizmos(GameObject gameObject, CapsuleCollider capsuleCollider, Color gizmosColor)
-    {
-        // Logic
-    }
-
-    public static Gizmo_Collider DrawMeshGizmos(GameObject gameObject, MeshCollider meshCollider, Color gizmosColor)
-    {
-        // Logic
-    }
-```
-
-In addition to this API you can use the **DrawBox** method to repurpose the drawer to draw any box, anywhere.
-- The first parameter is the **size** corresponds to the size of your box.
-- The second parameter is the **center** corresponds to the position of the box relative to the position of the drawer.
-- The third is the **color** you want to draw with.
-
-```csharp
-    public void DrawBox(Vector3 size, Vector3 center, Color color)
-    {
-        // Logic
-    }
-```
-
-
-___ 
-> We plan on completing this API with way more functionalities.
-> We also plan to add support for 2d collider support. 
-# RaycastTo Gizmos
-
-This component has a simple API for now. 
-Notice that for now it always draw from the position of the drawer to another position. If you need a feature to draw from a selected position to another one, please ask on the discord.
-
-Those methods are pretty simple to come around. Either pass a GameObject or a position you want to draw to an then choose the color.
-
-```csharp
-    public void DrawTo(GameObject target, Color color)
-    {
-        // Logic
-    }
-
-    public void DrawTo(Vector3 targetPosition, Color color)
-    {
-        // Logic
-    }
-```
-# Console API
-
-The console has an API that passes through the **DebugLog** static class.
-
-```csharp
-public static void Log(int i, LogColor logColor = LogColor.Default, LogType logType = LogType.Log)
-{
-    //Logic
-}
-
-public static void Log(bool b, LogColor logColor = LogColor.Default, LogType logType = LogType.Log)
-{
-    //Logic
-}
-
-public static void Log(string message, LogColor logColor = LogColor.Default, LogType logType = LogType.Log)
-{
-    //Logic
-}
-```
-- The first parameter is always what you wish to print. 
-- The second parameter is the color that you can select from a pre selected set of colors : 
-```csharp
-    public enum LogColor
-    {
-        Default, /// color of the log type
-        Red,
-        Green,
-        Blue,
-        Yellow,
-        White
-    }
-```
-- The third parameter is the log type. Each log type has a predefined color. This color can be overridden by selecting another color then default : 
-```csharp
-    public enum LogType
-    {
-        Log, //white
-        Warning, // orange
-        Error, // red
-        Command // blue
-    }
-```
-
-> For know only **int**, **bool** and **string** are supported, but feel free to request more functionalities.
 # Make your own commands
 
 The command system is based on scriptable objects. Scriptables object are really practical to use because they are Gameobject and scene agnostic.
@@ -516,6 +270,356 @@ You can find this script in the sample folder.
 > There is no support yet for non-static methods but its doable. If you feel like you are needing those, just contact us on the discord.
 
 > If you are wondering how it works behind the scene don't hesitate to contact us :D
+# Command Prediction
+
+> Introduced in version 1.3
+
+This feature makes navigation in the console easier. 
+
+To use it just open the console, and start typing. The console will show you any possibilities. 
+
+The complexity is related to the length of the commands and not to the total amount in the project. Any command you make are going to be automatically supported by this feature.
+
+- You can click on the commands to select it.
+- You can navigate using the UP and DOWN arrows. When navigating using the arrows you can use the RIGHT arrow to select the command. 
+
+When a command is selected it appears in the console, you can either complete it or just execute it pressing enter.
+
+![alt text](../assets/Console/ConsoleCommandPrediction.PNG)
+
+# Free Cam
+
+The free cam is here to give you a tool that's similar to the navigation in the scene panel of unity, but at runtime. 
+
+To use type *freecam*/*Freecam* followed by *enable* or *disable* to enable or disable the freecam in the console after opening it using **F12**. 
+
+Though this embeded in the package, the freecam comes as stand alone feature. Feel free to use it for your gameplay if you want. 
+
+> Future versions of the cam should be compatible with cinemachine. 
+
+The prefab for this one is in the same folder as the console.  
+
+![alt text](../assets/FreeCam.png)
+
+To use as a stand alone feature just drag and drop the prefab in your scene.
+
+> Note : If you use it as stand alone feature it'll not be control anymore by the console.
+# Gizmos
+As you now there is already an API in unity to draw gizmos for debugging purposes. But you cannot draw gizmos for run time. Those gizmos are harvesting the power of the **GL** API to show performance friendly gizmos at runtime for quite anything. 
+
+There are two way of using the gizmos. Manual and automatic using the console. 
+
+- The manual way consist of adding the gizmos components to your gameobjects
+- The automatic way is used to show all colliders in the scene. To show all colliders simple type the command : *Collider*/*collider*/*-c*/*-C* followed by *enable*/*e* or *disable*/*d* to enable or disable the in game gizmos rendering for the collider (beware on large scene there might be a small freeze when enabling). This command also activates all the other in game gizmos [going to change in next version] int the ingame console.
+
+Gizmos that are manually setted up can are still managed by the ingame console. Simple type : *Gizmos*/*gizmos*/*-g*/*-G* followed by *enable*/*e* or *disable*/*d* to enable or disable the in game gizmos.
+
+> Note : this commands would also hide the collider gizmos. We are awaiting for you feedback to improve this feature. 
+
+To set up a Gizmos as component simple add the choosen Gizmos to your gameobject.
+
+![alt text](../assets/AddGizmos.png)
+
+____
+Use the gizmos Collider to choose show a collider like shape. 
+
+![alt text](../assets/ColliderGizmos.png)
+
+There are four options : 
+- The **Box**, that you can control using the **Size** and the **Center** parameters
+- The **Sphere**, that you can control using the **Radius** and the **Center** parameters
+- The **Capsule**, that you can use using the **Radius**, the **Center** and the **Height** parameters
+- The **Mesh**, that you can use by drag and dropping a mesh in the mash container of the gameObject. [To enable this feature you need to enable Read/Write on your meshes in the import settings].
+
+> Note that those gizmos support bloom and they can be used as part of your project for other purposes than debugging.
+
+____
+Use the Gizmos Raycast component to draw a Ray cast.
+
+![alt text](../assets/GizmosRaycast.png)
+
+There are some direction preset for all the cartesian direction (up, left, etc...) but you can use custom to choose your own direction. 
+
+____
+Use the Gizmos Raycast To component to draw a gizmos between two targets.
+
+![alt text](../assets/GizmosRaycastTo.png)
+
+You just have to give it a ref to a gameobject and it'll draw a ray to it and update the ray at everyframes.
+
+___
+We are planning on adding custom editors in the future to simplify the usage of those features. Please take a look at the section [Gizmos API](../apis/api_gizmos.md) to learn about the code API for the gizmos.
+# Metrics
+
+The metrics are enabled using the interactive console with the command :
+> *metrics*/*Metrics*/*-m*/*-M* followed by *enable*/*e* or *disable*/*d* to enable or disable the metrics.
+
+![alt text](../assets/Metrics_0.png)
+
+The Graphics section displays the FPS and the time elapsed since the last frame.
+It also shows the time spent by the Main thread and a breakdown of the time taken by the Render thread. The graph represents the time spent by the main thread, targeting 120 FPS.
+Additionally, this section includes:
+
+    The number of batches
+    The number of triangles
+    The number of vertices
+    The number of SetPass calls
+    The number of draw calls
+    The number of shadow casters
+    The number of visible skinned meshes
+
+The Memory section displays the total memory usage across:
+
+    Engine
+    System
+    Video
+    Audio
+    Garbage collection
+
+The Audio section shows the current audio level.
+
+To adjust the update rate of the metrics, modify the Update Delta Time parameter in the metrics prefab:
+
+    Increase the value to reduce the update frequency.
+    Decrease the value to increase the update frequency.
+
+You can use the metrics as a stand alone feature by drag and dropping it in your scene. 
+
+![alt text](../assets/Metrics_1.png)
+
+> Note : If you use the metrics as a standalone feature, it'll not be managed by the console anymore.
+# NavMesh Debugging
+
+This functionality allows to debug the navmesh at runtime. 
+
+To use : there are 3 commands available in the interactive console.
+
+
+```Debug Toolkit Command
+    navA gizmos enable/disable : To draw the gizmos of the navAgent pathing
+
+    navA info enable/disable : To show the info about the pathing of the navAgent
+
+    navA all enable/disable : To activate all commands
+```
+
+This features cannot be used as a standalone yet.
+
+
+> Note : Do not hesitate to request more features for the navmesh debbuging.
+# The Bug Report
+
+> Introduced in V 1.3
+
+Thanks to this feature you can send tickets to a board. For now only trello is supported, but if you ever need to support more platforms (Jira, Azure Devops, Card decks, ...). Just tell us and we'll add it for you !!
+
+This section is all about guiding you through the process of setting up your project to enable the Trello.
+
+![alt text](../assets/BugReport/TrelloUpdate.png)
+
+> As always we listen carefully to your feedbacks and we'd love to improve the feature based on those !! 
+# Set up your board
+
+> Introduced in V 1.3
+
+The set up is really guided thanks to a custom inspector. The main idea is to store your board information in a scriptable object. Thanks to this process you can have multiple boards for your project. Maybe you want each playtest to have its own board. 
+
+For this par you are going to need a Trello account. Since your API key and Token are going to be present in your build we most advise to make a new account for the debug toolkit.
+
+## Step 1 : Create the scriptable object
+Right click and create the SO
+
+![alt text](../assets/BugReport/CreateSO.png)
+
+## Step 2 : Set up you API key
+
+Click on the Go generate an API keybutton. It'll open the Trello website. If you are not connected or don't have a trello account you are going to have do both.
+
+![alt text](../assets/BugReport/GenerateKeySo.png)
+
+Here click on the blue hightlighted text.
+
+![alt text](../assets/BugReport/ApiLandingpage.png)
+
+You are going to need to click on the top right button, to create a new power up. On this screenshot we already created ours. You need yours.
+
+![alt text](../assets/BugReport/CreatePowerUp.png)
+
+Now just fill the form and click on Create
+
+![alt text](../assets/BugReport/CreateForm.png)
+
+Now generate your API key 
+
+![alt text](../assets/BugReport/APIKey.png)
+
+Copy the API key you just go on the scriptable object in unity. 
+
+## Step 3 : Get your token
+Don't worry its way faster than getting the API key. 
+
+Now that you've entered your API key, the scriptable object changed and gives you a button to request the Token. Click on the button Go Request Token.
+
+![alt text](../assets/BugReport/TokenSO.png)
+
+You'll get to a trello page where they ask you if you allow your power up to communicate with the boards related to your account.
+Just allow it !! 
+
+![alt text](../assets/BugReport/AllowToken.png)
+
+You are going to be redirected to a page for your token. Just copy past it to your scriptable object in unity.
+
+## Step 4 : Init the board
+This is the last step !! 
+
+Name your Workspace, board and the list where the bugs are going to be reported. And press Init trello. You should see some messages in the Unity consol. If you get any error please contact support on the discord.
+
+![alt text](../assets/BugReport/BoardNaming.png)
+# Enable the feature
+
+> Introduced in V 1.3
+
+To enable the feature you need to add the UDTReport-Canvas prefab in your scene.
+Then you need to reference your TrelloSettings in the Report manager of this prefab. 
+
+> Note : you can change the Trello settings to interact with multiple boards. 
+# Report a bug
+
+> Introduced in V 1.3
+
+To report a bug just open the game. Press F11 or click on the button right icon to open the bug report form. 
+
+Write your description end press the send button. 
+
+That's it. 
+
+If you get errors, or if the card is not created on your Trello, feel free to contact support on the discord.
+# Code APIs
+
+In this section you'll learn how to use the different components of the toolkit in your scripts.
+
+> Many functionalities are going to be added to the APIs of the different component over time. Stay tuned.
+
+## Gizmos 
+You can create and delete gizmos at runtime using the Gizmos API.
+> Note : this APIs might change depending on your feedback. Make sure to come back to this section if your logic breaks. 
+
+For this version there only is API for the Collider Gizmos and the RaycastTo Gizmos.
+
+> Feel free to request API features.
+> If you make your own please show them to us, maybe they could be integrated in the toolkit.
+
+## Console
+You can use the **DebugLog** API of the in-game console to print logs in the in-game console directly.
+# Collider Gizmos
+
+The collider Gizmos is composed of four static method. You can use them anywhere to make your own instances the gizmos, and draw your own shape based on a collider. 
+
+- The **targetObject** is the gameObject on which your gizmos drawer is going to be instantiated.
+- The second parameter is a **collider**. 
+- The third is the **color** you want to draw with.
+
+```csharp
+    public static Gizmo_Collider DrawBoxGizmos(GameObject targetObject, BoxCollider boxCollider, Color colliderColor)
+    {
+        // Logic
+    }
+
+    public static Gizmo_Collider DrawSphereGizmos(GameObject gameObject, SphereCollider sphereCollider, Color gizmosColor)
+    {
+        // Logic
+    }
+
+    public static Gizmo_Collider DrawCapsuleGizmos(GameObject gameObject, CapsuleCollider capsuleCollider, Color gizmosColor)
+    {
+        // Logic
+    }
+
+    public static Gizmo_Collider DrawMeshGizmos(GameObject gameObject, MeshCollider meshCollider, Color gizmosColor)
+    {
+        // Logic
+    }
+```
+
+In addition to this API you can use the **DrawBox** method to repurpose the drawer to draw any box, anywhere.
+- The first parameter is the **size** corresponds to the size of your box.
+- The second parameter is the **center** corresponds to the position of the box relative to the position of the drawer.
+- The third is the **color** you want to draw with.
+
+```csharp
+    public void DrawBox(Vector3 size, Vector3 center, Color color)
+    {
+        // Logic
+    }
+```
+
+
+___ 
+> We plan on completing this API with way more functionalities.
+> We also plan to add support for 2d collider support. 
+# RaycastTo Gizmos
+
+This component has a simple API for now. 
+Notice that for now it always draw from the position of the drawer to another position. If you need a feature to draw from a selected position to another one, please ask on the discord.
+
+Those methods are pretty simple to come around. Either pass a GameObject or a position you want to draw to an then choose the color.
+
+```csharp
+    public void DrawTo(GameObject target, Color color)
+    {
+        // Logic
+    }
+
+    public void DrawTo(Vector3 targetPosition, Color color)
+    {
+        // Logic
+    }
+```
+# Console API
+
+The console has an API that passes through the **DebugLog** static class.
+
+```csharp
+public static void Log(int i, LogColor logColor = LogColor.Default, LogType logType = LogType.Log)
+{
+    //Logic
+}
+
+public static void Log(bool b, LogColor logColor = LogColor.Default, LogType logType = LogType.Log)
+{
+    //Logic
+}
+
+public static void Log(string message, LogColor logColor = LogColor.Default, LogType logType = LogType.Log)
+{
+    //Logic
+}
+```
+- The first parameter is always what you wish to print. 
+- The second parameter is the color that you can select from a pre selected set of colors : 
+```csharp
+    public enum LogColor
+    {
+        Default, /// color of the log type
+        Red,
+        Green,
+        Blue,
+        Yellow,
+        White
+    }
+```
+- The third parameter is the log type. Each log type has a predefined color. This color can be overridden by selecting another color then default : 
+```csharp
+    public enum LogType
+    {
+        Log, //white
+        Warning, // orange
+        Error, // red
+        Command // blue
+    }
+```
+
+> For know only **int**, **bool** and **string** are supported, but feel free to request more functionalities.
 # About us
 
 At 4Hands2cats, we create debugging tools to streamline development. As two devs (and two cats), we focus on robust, user-friendly solutions for Unity. Our first asset, a complete debug toolkit, works in build and runtime for full control. We're committed to improving and expanding our tools.
@@ -553,8 +657,18 @@ Is there a feature you need? Feel free to ask on the dedicated discord server an
 # Patch Note
 
 This section is the log of all the changes and additions to UDT since release.
+
+## V1.3
+### Feature
+-Trello ticketing, to make you able to simplify the bug collection in playtests and post launch.
+-2D Gizmos
+
+### Improvements
+-Custom inspectors for the gizmos to simplify their usage
+-Command prediction in the console 
+
 ## V1.2.1
-##Fix
+### Fix
 -A major issue in the static command check
 -Removes some dev logs
 
