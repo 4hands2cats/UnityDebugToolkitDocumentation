@@ -6,6 +6,9 @@
   - [Quick Start](getting-started/quick-start.md)
 - Features
   - [In Game Console](features/console.md)
+      - [Make your own commands](IngameConsole/custom_commands.md)
+      - [Static Commands](IngameConsole/staticCommands.md)
+      - [Command Prediction](IngameConsole/CommandPrediction.md)
   - [Gizmos](features/gizmos.md)
   - [FreeCam](features/freecam.md)
   - [Metrics](features/metrics.md)
@@ -14,9 +17,7 @@
   - [Collider Gizmos](apis/collider_gizmos.md)
   - [RaycastTo Gizmos](apis/raycastTo_gizmos.md)
   - [Console](apis/console.md)
-- Customization
-  - [Make your own commands](customization/custom_commands.md)
-  - [Static Commands](customization/staticCommands.md)
+
 - [FAQ](faq.md)
 - [What's next](whatNext.md)
 - [Patch Note](patchnote.md)

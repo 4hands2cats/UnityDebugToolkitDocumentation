@@ -1,8 +1,18 @@
 # Patch Note
 
 This section is the log of all the changes and additions to UDT since release.
+
+## V1.3
+### Feature
+-Trello ticketing, to make you able to simplify the bug collection in playtests and post launch.
+-2D Gizmos
+
+### Improvements
+-Custom inspectors for the gizmos to simplify their usage
+-Command prediction in the console 
+
 ## V1.2.1
-##Fix
+### Fix
 -A major issue in the static command check
 -Removes some dev logs
 

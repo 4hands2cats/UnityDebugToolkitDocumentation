@@ -553,6 +553,10 @@ Is there a feature you need? Feel free to ask on the dedicated discord server an
 # Patch Note
 
 This section is the log of all the changes and additions to UDT since release.
+## V1.2.1
+##Fix
+-A major issue in the static command check
+-Removes some dev logs
 
 ## V1.2.0
 ### Features
@@ -564,8 +568,6 @@ This section is the log of all the changes and additions to UDT since release.
 - More icons for the scripts of the plugin
 - Performance improvements
 - Console navigation improvement
-
-
 
 ## V 1.1.0
 ### Features
