@@ -48,22 +48,44 @@ Once the files are downloaded, import them in your project by clicking on the **
 The toolkit is in the 4Hands2Cats folder. In the future if we do more assets they'll install in this folder as well.
 
 ![alt text](../assets/AssetInFolder.png)
+
 # Quick start guide
 
-As you just seen in the demo scene, the toolkit is pretty simple to include in your project. You just have to drag and drop the **UDTConsole-Canvas** prefab from the prefab folder inside your scene. 
+As you just seen in the demo scene, the toolkit is pretty simple to include in your project. You just have to drag and drop the **UDTConsole-Standalone** prefab from the prefab folder inside your scene. 
+Alternatively, use the **UDTConsole-Mobile** for your mobile project (Android/IOS).
 
 ![alt text](../assets/UDTCanvas.png)
 
 Don't forget to remove it for production builds. 
+
 # Demo Scene Tour
 
-The demo scene is based on the third person template of Unity. We've added our debug toolkit in this scene.
+We provide three demo scenes to help you quickly explore and test the features of the toolkit in different contexts:
+
+1. Third-Person 3D Demo
+
+Based on Unity's third-person template, this scene showcases our debug toolkit in a 3D environment. It includes character movement, camera follow, and in-world interaction.
+To use this demo scene just press play. The Console and the all the other features are on the **F12** key. 
+    Controls:
+    Use **WSDQ** to move the character, the mouse to control the camera, and press F12 to toggle the debug console and other tools.
 
 ![alt text](../assets/DemoScene.png)
 
+2. 2D Demo Scene
+
+This lightweight scene is designed to demonstrate the toolkit in a 2D context. It’s ideal for side-scrollers, top-down games, or any 2D project.
 To use this demo scene just press play. The Console and the all the other features are on the **F12** key. 
 
-To navigate in the scene use the **WSDQ** keys and the mouse to control the camera. 
+3. Mobile Demo Scene
+
+Tailored for touchscreen interaction, this scene demonstrates how the toolkit behaves on mobile devices. It includes on-screen controls and supports both portrait and landscape modes.
+To use this demo scene just press play. The Console and the all the other features are on the **F12** key. 
+    Controls:
+    Use the on screen controller to move the character and control the camera.
+
+Each scene is plug-and-play ready—just open the one you need and press Play in the Unity Editor. You can easily customize them or use them as a starting point for your own testing environments.
+
+
 # Console
 
 The In-game console is the central piece of UDT. It controls every features of the toolkit and more.
@@ -304,7 +326,9 @@ The prefab for this one is in the same folder as the console.
 To use as a stand alone feature just drag and drop the prefab in your scene.
 
 > Note : If you use it as stand alone feature it'll not be control anymore by the console.
+
 # Gizmos
+
 As you now there is already an API in unity to draw gizmos for debugging purposes. But you cannot draw gizmos for run time. Those gizmos are harvesting the power of the **GL** API to show performance friendly gizmos at runtime for quite anything. 
 
 There are two way of using the gizmos. Manual and automatic using the console. 
@@ -349,6 +373,7 @@ You just have to give it a ref to a gameobject and it'll draw a ray to it and up
 
 ___
 We are planning on adding custom editors in the future to simplify the usage of those features. Please take a look at the section [Gizmos API](../apis/api_gizmos.md) to learn about the code API for the gizmos.
+
 # Metrics
 
 The metrics are enabled using the interactive console with the command :
@@ -388,6 +413,7 @@ You can use the metrics as a stand alone feature by drag and dropping it in your
 ![alt text](../assets/Metrics_1.png)
 
 > Note : If you use the metrics as a standalone feature, it'll not be managed by the console anymore.
+
 # NavMesh Debugging
 
 This functionality allows to debug the navmesh at runtime. 
@@ -407,6 +433,7 @@ This features cannot be used as a standalone yet.
 
 
 > Note : Do not hesitate to request more features for the navmesh debbuging.
+
 # The Bug Report
 
 > Introduced in V 1.3
@@ -418,6 +445,7 @@ This section is all about guiding you through the process of setting up your pro
 ![alt text](../assets/BugReport/TrelloUpdate.png)
 
 > As always we listen carefully to your feedbacks and we'd love to improve the feature based on those !! 
+
 # Set up your board
 
 > Introduced in V 1.3
@@ -427,6 +455,7 @@ The set up is really guided thanks to a custom inspector. The main idea is to st
 For this par you are going to need a Trello account. Since your API key and Token are going to be present in your build we most advise to make a new account for the debug toolkit.
 
 ## Step 1 : Create the scriptable object
+
 Right click and create the SO
 
 ![alt text](../assets/BugReport/CreateSO.png)
@@ -456,6 +485,7 @@ Now generate your API key
 Copy the API key you just go on the scriptable object in unity. 
 
 ## Step 3 : Get your token
+
 Don't worry its way faster than getting the API key. 
 
 Now that you've entered your API key, the scriptable object changed and gives you a button to request the Token. Click on the button Go Request Token.
@@ -470,11 +500,13 @@ Just allow it !!
 You are going to be redirected to a page for your token. Just copy past it to your scriptable object in unity.
 
 ## Step 4 : Init the board
+
 This is the last step !! 
 
 Name your Workspace, board and the list where the bugs are going to be reported. And press Init trello. You should see some messages in the Unity consol. If you get any error please contact support on the discord.
 
 ![alt text](../assets/BugReport/BoardNaming.png)
+
 # Enable the feature
 
 > Introduced in V 1.3
@@ -483,6 +515,7 @@ To enable the feature you need to add the UDTReport-Canvas prefab in your scene.
 Then you need to reference your TrelloSettings in the Report manager of this prefab. 
 
 > Note : you can change the Trello settings to interact with multiple boards. 
+
 # Report a bug
 
 > Introduced in V 1.3
@@ -494,6 +527,7 @@ Write your description end press the send button.
 That's it. 
 
 If you get errors, or if the card is not created on your Trello, feel free to contact support on the discord.
+
 # Code APIs
 
 In this section you'll learn how to use the different components of the toolkit in your scripts.
@@ -501,6 +535,7 @@ In this section you'll learn how to use the different components of the toolkit 
 > Many functionalities are going to be added to the APIs of the different component over time. Stay tuned.
 
 ## Gizmos 
+
 You can create and delete gizmos at runtime using the Gizmos API.
 > Note : this APIs might change depending on your feedback. Make sure to come back to this section if your logic breaks. 
 
@@ -510,7 +545,9 @@ For this version there only is API for the Collider Gizmos and the RaycastTo Giz
 > If you make your own please show them to us, maybe they could be integrated in the toolkit.
 
 ## Console
+
 You can use the **DebugLog** API of the in-game console to print logs in the in-game console directly.
+
 # Collider Gizmos
 
 The collider Gizmos is composed of four static method. You can use them anywhere to make your own instances the gizmos, and draw your own shape based on a collider. 
@@ -557,6 +594,7 @@ In addition to this API you can use the **DrawBox** method to repurpose the draw
 ___ 
 > We plan on completing this API with way more functionalities.
 > We also plan to add support for 2d collider support. 
+
 # RaycastTo Gizmos
 
 This component has a simple API for now. 
@@ -657,6 +695,14 @@ Is there a feature you need? Feel free to ask on the dedicated discord server an
 # Patch Note
 
 This section is the log of all the changes and additions to UDT since release.
+
+## V1.4
+### Feature
+-Mobile Support
+-Discord ticketing
+
+### Improvements
+-UI button for metrics.
 
 ## V1.3
 ### Feature
