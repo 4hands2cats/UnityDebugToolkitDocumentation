@@ -2,6 +2,14 @@
 
 This section is the log of all the changes and additions to UDT since release.
 
+## V1.4
+### Feature
+-Mobile Support
+-Discord ticketing
+
+### Improvements
+-UI button for metrics.
+
 ## V1.3
 ### Feature
 -Trello ticketing, to make you able to simplify the bug collection in playtests and post launch.
