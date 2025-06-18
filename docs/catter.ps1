@@ -11,7 +11,8 @@ Get-Content README.md, getting-started/introduction.md, `
     features/metrics.md, `
     features/navmesh.md, `
     BugReport/bugRepport.md, `
-    BugReport/boardSetUp.md, `
+    BugReport/TrelloBoardSetUp.md, `
+    BugReport/DiscordBoardSetUp.md, `
     BugReport/enablefeature.md, `
     BugReport/ReportABug.md, `
     apis/apis.md, `

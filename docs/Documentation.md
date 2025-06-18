@@ -1,7 +1,10 @@
 # Debug Toolkit for Unity (UDT)
 
-> Thanks for using the UDT.
-> Unity 6+ is supported for this asset.
+<div style="border-left: 4px solid #ffa500; padding: 1em; background: #fff8e1;">
+Thanks for using the UDT.
+Unity 6+ is supported for this asset.
+</div>
+
 
 This documentation aims to get you ready to use and modify UDT for your awesome projects.
 
@@ -34,7 +37,9 @@ In the next few sections you are going to learn how to import UDT to your projec
 
 # Install UDT
 
-> Make sure that you are using Unity 6 or above.
+<div style="border-left: 4px solid #ffa500; padding: 1em; background: #fff8e1;">
+Make sure that you are using Unity 6 or above.
+</div>
 
 ## Package manager
 Get into the unity package manager at the top of the Unity Engine window and look for UDT in your assets 
@@ -48,16 +53,12 @@ Once the files are downloaded, import them in your project by clicking on the **
 The toolkit is in the 4Hands2Cats folder. In the future if we do more assets they'll install in this folder as well.
 
 ![alt text](../assets/AssetInFolder.png)
-
-# Quick start guide
-
 As you just seen in the demo scene, the toolkit is pretty simple to include in your project. You just have to drag and drop the **UDTConsole-Standalone** prefab from the prefab folder inside your scene. 
 Alternatively, use the **UDTConsole-Mobile** for your mobile project (Android/IOS).
 
 ![alt text](../assets/UDTCanvas.png)
 
 Don't forget to remove it for production builds. 
-
 # Demo Scene Tour
 
 We provide three demo scenes to help you quickly explore and test the features of the toolkit in different contexts:
@@ -84,8 +85,6 @@ To use this demo scene just press play. The Console and the all the other featur
     Use the on screen controller to move the character and control the camera.
 
 Each scene is plug-and-play ready—just open the one you need and press Play in the Unity Editor. You can easily customize them or use them as a starting point for your own testing environments.
-
-
 # Console
 
 The In-game console is the central piece of UDT. It controls every features of the toolkit and more.
@@ -167,7 +166,10 @@ There is an API to log in the in-game console only. Go in the section [Console](
 
 The command system is based on scriptable objects. Scriptables object are really practical to use because they are Gameobject and scene agnostic.
 
-> We are planning on making an API to create commands using C# attributs which'll give you two options to create your console commands.
+<div style="border-left: 4px solid #ffa500; padding: 1em; background: #fff8e1;">
+We are planning on making an API to create commands using C# attributs which'll give you two options to create your console commands.
+</div>
+
 
 ___ 
 
@@ -212,10 +214,15 @@ Then in the script you need to :
 ![alt text](../assets/BindCommand.png)
 
 ___
-> Note : You can find the existing commands used in the toolkit the 4Hands2Cats/DebugToolkit/Console/Interaction/CommandData folder.
+<div style="border-left: 4px solid #ffa500; padding: 1em; background: #fff8e1;">
+<strong>Note</strong>
+You can find the existing commands used in the toolkit the 4Hands2Cats/DebugToolkit/Console/Interaction/CommandData folder.
+</div>
 # Static commands
 
-> Introduced in V1.2
+<div style="border-left: 4px solid #4CAF50; background: #f0fff4; padding: 0.75em 1em; margin: 1em 0;">
+  🆕 <strong>Introduced in version 1.2</strong>
+</div>
 
 There is now a way to directly create debug command for the console in your code base using attributes. 
 
@@ -288,13 +295,16 @@ You can find this script in the sample folder.
      }
  }
 ```
+<div style="border-left: 4px solid #ffa500; padding: 1em; background: #fff8e1;">
+There is no support yet for non-static methods but its doable. If you feel like you are needing those, just contact us on the discord.
 
-> There is no support yet for non-static methods but its doable. If you feel like you are needing those, just contact us on the discord.
-
-> If you are wondering how it works behind the scene don't hesitate to contact us :D
+If you are wondering how it works behind the scene don't hesitate to contact us :D
+</div>
 # Command Prediction
 
-> Introduced in version 1.3
+<div style="border-left: 4px solid #4CAF50; background: #f0fff4; padding: 0.75em 1em; margin: 1em 0;">
+  🆕 <strong>Introduced in version 1.3</strong>
+</div>
 
 This feature makes navigation in the console easier. 
 
@@ -317,7 +327,10 @@ To use type *freecam*/*Freecam* followed by *enable* or *disable* to enable or d
 
 Though this embeded in the package, the freecam comes as stand alone feature. Feel free to use it for your gameplay if you want. 
 
-> Future versions of the cam should be compatible with cinemachine. 
+
+<div style="border-left: 4px solid #ffa500; padding: 1em; background: #fff8e1;">
+Future versions of the cam should be compatible with cinemachine.
+</div>
 
 The prefab for this one is in the same folder as the console.  
 
@@ -325,10 +338,11 @@ The prefab for this one is in the same folder as the console.
 
 To use as a stand alone feature just drag and drop the prefab in your scene.
 
-> Note : If you use it as stand alone feature it'll not be control anymore by the console.
-
+<div style="border-left: 4px solid #ffa500; padding: 1em; background: #fff8e1;">
+<strong>Note</strong>
+If you use it as stand alone feature it'll not be control anymore by the console.
+</div>
 # Gizmos
-
 As you now there is already an API in unity to draw gizmos for debugging purposes. But you cannot draw gizmos for run time. Those gizmos are harvesting the power of the **GL** API to show performance friendly gizmos at runtime for quite anything. 
 
 There are two way of using the gizmos. Manual and automatic using the console. 
@@ -373,7 +387,6 @@ You just have to give it a ref to a gameobject and it'll draw a ray to it and up
 
 ___
 We are planning on adding custom editors in the future to simplify the usage of those features. Please take a look at the section [Gizmos API](../apis/api_gizmos.md) to learn about the code API for the gizmos.
-
 # Metrics
 
 The metrics are enabled using the interactive console with the command :
@@ -412,8 +425,10 @@ You can use the metrics as a stand alone feature by drag and dropping it in your
 
 ![alt text](../assets/Metrics_1.png)
 
-> Note : If you use the metrics as a standalone feature, it'll not be managed by the console anymore.
-
+<div style="border-left: 4px solid #ffa500; padding: 1em; background: #fff8e1;">
+<strong>Note</strong>
+If you use the metrics as a standalone feature, it'll not be managed by the console anymore.
+</div>
 # NavMesh Debugging
 
 This functionality allows to debug the navmesh at runtime. 
@@ -431,31 +446,36 @@ To use : there are 3 commands available in the interactive console.
 
 This features cannot be used as a standalone yet.
 
-
-> Note : Do not hesitate to request more features for the navmesh debbuging.
-
+<div style="border-left: 4px solid #ffa500; padding: 1em; background: #fff8e1;">
+<strong>Note</strong>
+Do not hesitate to request more features for the navmesh debbuging.
+</div>
 # The Bug Report
 
-> Introduced in V 1.3
+<div style="border-left: 4px solid #4CAF50; background: #f0fff4; padding: 0.75em 1em; margin: 1em 0;">
+  🆕 <strong>Introduced in version 1.3</strong>
+</div>
 
-Thanks to this feature you can send tickets to a board. For now only trello is supported, but if you ever need to support more platforms (Jira, Azure Devops, Card decks, ...). Just tell us and we'll add it for you !!
+Thanks to this feature you can send tickets to a board. The system supports both Trello and Discord. We are planning to extend to Jira, Notion, CardDeck and Azure. Just tell us and we'll add it for you !!
 
-This section is all about guiding you through the process of setting up your project to enable the Trello.
+This section is all about guiding you through the process of setting up your project to enable the Trello or/and Discord
 
 ![alt text](../assets/BugReport/TrelloUpdate.png)
 
-> As always we listen carefully to your feedbacks and we'd love to improve the feature based on those !! 
+<div style="border-left: 4px solid #ffa500; padding: 1em; background: #fff8e1;">
+As always we listen carefully to your feedbacks and we'd love to improve the feature based on those !! 
+</div>
+# Set up the Trello bug report
 
-# Set up your board
-
-> Introduced in V 1.3
+<div style="border-left: 4px solid #4CAF50; background: #f0fff4; padding: 0.75em 1em; margin: 1em 0;">
+  🆕 <strong>Introduced in version 1.3</strong>
+</div>
 
 The set up is really guided thanks to a custom inspector. The main idea is to store your board information in a scriptable object. Thanks to this process you can have multiple boards for your project. Maybe you want each playtest to have its own board. 
 
-For this par you are going to need a Trello account. Since your API key and Token are going to be present in your build we most advise to make a new account for the debug toolkit.
+For this part you are going to need a Trello account. Since your API key and Token are going to be present in your build we most advise to make a new account for the debug toolkit.
 
 ## Step 1 : Create the scriptable object
-
 Right click and create the SO
 
 ![alt text](../assets/BugReport/CreateSO.png)
@@ -485,7 +505,6 @@ Now generate your API key
 Copy the API key you just go on the scriptable object in unity. 
 
 ## Step 3 : Get your token
-
 Don't worry its way faster than getting the API key. 
 
 Now that you've entered your API key, the scriptable object changed and gives you a button to request the Token. Click on the button Go Request Token.
@@ -500,25 +519,47 @@ Just allow it !!
 You are going to be redirected to a page for your token. Just copy past it to your scriptable object in unity.
 
 ## Step 4 : Init the board
-
 This is the last step !! 
 
 Name your Workspace, board and the list where the bugs are going to be reported. And press Init trello. You should see some messages in the Unity consol. If you get any error please contact support on the discord.
 
 ![alt text](../assets/BugReport/BoardNaming.png)
+# Set Up the Discord Bug report
+
+<div style="border-left: 4px solid #4CAF50; background: #f0fff4; padding: 0.75em 1em; margin: 1em 0;">
+  🆕 <strong>Introduced in version 1.4</strong>
+</div>
+
+<div style="border-left: 4px solid #ffa500; padding: 1em; background: #fff8e1;">
+  <strong>Disclaimer:</strong><br>
+Setting up Discord is a bit harder then Trello. The main reason is that Discord's Token are too powerful. One need to protect the token such as your user cannot abuse it. 
+
+As a consequence the request have to go through a relay server. For the sake of simplicity we chose to use the Unity's Cloud Code Service. In term of pricing it goes for 1 000 000 free request per month and 0.5$ per supplementary million. If you feel like your project is going to need more, reach out to us so we could make a custom AWS implementation just for you.
+</div>
+
 
 # Enable the feature
 
-> Introduced in V 1.3
+<div style="border-left: 4px solid #4CAF50; background: #f0fff4; padding: 0.75em 1em; margin: 1em 0;">
+  🆕 <strong>Introduced in version 1.3</strong>
+</div>
 
 To enable the feature you need to add the UDTReport-Canvas prefab in your scene.
 Then you need to reference your TrelloSettings in the Report manager of this prefab. 
 
-> Note : you can change the Trello settings to interact with multiple boards. 
+There is a dropdown menu of the report manager select the Report Target you've set up. 
 
+![alt text](../assets/BugReport/ReportManager.png)
+
+<div style="border-left: 4px solid #ffa500; padding: 1em; background: #fff8e1;">
+<strong>Note</strong>
+You can change the Trello settings to interact with multiple boards. 
+</div>
 # Report a bug
 
-> Introduced in V 1.3
+<div style="border-left: 4px solid #4CAF50; background: #f0fff4; padding: 0.75em 1em; margin: 1em 0;">
+  🆕 <strong>Introduced in version 1.3</strong>
+</div>
 
 To report a bug just open the game. Press F11 or click on the button right icon to open the bug report form. 
 
@@ -527,27 +568,31 @@ Write your description end press the send button.
 That's it. 
 
 If you get errors, or if the card is not created on your Trello, feel free to contact support on the discord.
-
 # Code APIs
 
 In this section you'll learn how to use the different components of the toolkit in your scripts.
 
-> Many functionalities are going to be added to the APIs of the different component over time. Stay tuned.
+<div style="border-left: 4px solid #ffa500; padding: 1em; background: #fff8e1;">
+Many functionalities are going to be added to the APIs of the different component over time. Stay tuned.
+</div>
+
 
 ## Gizmos 
-
 You can create and delete gizmos at runtime using the Gizmos API.
-> Note : this APIs might change depending on your feedback. Make sure to come back to this section if your logic breaks. 
+<div style="border-left: 4px solid #ffa500; padding: 1em; background: #fff8e1;">
+  <strong>Note:</strong><br>
+This APIs might change depending on your feedback. Make sure to come back to this section if your logic breaks. 
+</div>
 
 For this version there only is API for the Collider Gizmos and the RaycastTo Gizmos.
 
-> Feel free to request API features.
-> If you make your own please show them to us, maybe they could be integrated in the toolkit.
+<div style="border-left: 4px solid #ffa500; padding: 1em; background: #fff8e1;">
+Feel free to request API features.
+If you make your own please show them to us, maybe they could be integrated in the toolkit.
+</div>
 
 ## Console
-
 You can use the **DebugLog** API of the in-game console to print logs in the in-game console directly.
-
 # Collider Gizmos
 
 The collider Gizmos is composed of four static method. You can use them anywhere to make your own instances the gizmos, and draw your own shape based on a collider. 
@@ -594,7 +639,6 @@ In addition to this API you can use the **DrawBox** method to repurpose the draw
 ___ 
 > We plan on completing this API with way more functionalities.
 > We also plan to add support for 2d collider support. 
-
 # RaycastTo Gizmos
 
 This component has a simple API for now. 
@@ -666,93 +710,115 @@ At 4Hands2cats, we create debugging tools to streamline development. As two devs
 **Where can I contact you to send you feedback or request some features ?**
 
     - Just come on the discord server and ask your question on the dedicated channel.
-# What's next ?
+# 🚀 What's Next?
 
-## Usability
+<h2>Usability</h2>
+<ul>
+  <li>Custom inspector for all components.</li>
+  <li>Completion of the Gizmos API.</li>
+  <li>System based on C# attributes to create your own commands directly in code while keeping the ScriptableObject workflow.</li>
+  <li>Command auto-completion.</li>
+</ul>
 
-- Custom inspector for all components
-- Completing the Gizmos API
-- A system based on C# attributes to make your own commands directly in code while keeping the scriptable object work flow.
-- Command auto-completion
+<h2>Features</h2>
+<ul>
+  <li>Cinemachine-based FreeCam.</li>
+  <li>Profiling features.</li>
+  <li>Export logs and metrics to a file or remote endpoint for post-processing (e.g. spreadsheet analysis).</li>
+  <li>VR/XR support for the console.</li>
+</ul>
 
-## Features
+<h2>Known Issues</h2>
+<p>Awaiting your feedback!</p>
 
-- A cinemachine freeCam
-- Profiling features
-- A way to create your own commands using a code API.
-- A way to print the logs and the metrics to send them to an adress or post process the result using a spreadshit.
-- 2D support for colliders
-- Mobile device support for the console.
-- VR/XR support for the console.
+<hr>
 
-## Known issues
+<p>
+  Is there a feature you need? Feel free to ask on our <a href="https://discord.gg/8M5q85Ea" target="_blank">dedicated Discord server</a> and we'll see what we can do.<br>
+  Our goal is to improve this asset as much as possible so it fulfills all your debugging needs on your Unity Engine journey.
+</p>
 
-Awaiting for your feedbacks
+# 📝 Patch Notes
+<p>This section logs all updates and additions to <strong>UDT</strong> since release.</p>
 
----
+<hr>
 
-Is there a feature you need? Feel free to ask on the dedicated discord server and we'll see what we can do. Our goal is to improve this asset as much as possible so it fullfills all your needs in term of debuging in your Unity Engine journey.
-# Patch Note
+<h2>🔷 Version 1.3</h2>
 
-This section is the log of all the changes and additions to UDT since release.
+<h3>✨ Features</h3>
+<ul>
+  <li>Trello ticketing to simplify bug collection during playtests and post-launch.</li>
+  <li>2D Gizmos support.</li>
+</ul>
 
-## V1.4
-### Feature
--Mobile Support
--Discord ticketing
+<h3>🔧 Improvements</h3>
+<ul>
+  <li>Custom inspectors for gizmos to simplify usage.</li>
+  <li>Command prediction in the console.</li>
+</ul>
 
-### Improvements
--UI button for metrics.
+<hr>
 
-## V1.3
-### Feature
--Trello ticketing, to make you able to simplify the bug collection in playtests and post launch.
--2D Gizmos
+<h2>🔹 Version 1.2.1</h2>
 
-### Improvements
--Custom inspectors for the gizmos to simplify their usage
--Command prediction in the console 
+<h3>🐞 Fixes</h3>
+<ul>
+  <li>Fixed a major issue in static command validation.</li>
+  <li>Removed leftover development logs.</li>
+</ul>
 
-## V1.2.1
-### Fix
--A major issue in the static command check
--Removes some dev logs
+<hr>
 
-## V1.2.0
-### Features
-- Adds Commands for static functions as code attributes
-- Adds Metrics graphic plot 
-- Adds metrics for audio and memory usage
+<h2>🔷 Version 1.2.0</h2>
 
-### Improvements
-- More icons for the scripts of the plugin
-- Performance improvements
-- Console navigation improvement
+<h3>✨ Features</h3>
+<ul>
+  <li>Added support for static function commands via code attributes.</li>
+  <li>Added graphical plotting for metrics.</li>
+  <li>Added metrics for audio and memory usage.</li>
+</ul>
 
-## V 1.1.0
-### Features
-- Adds a runtime gizmos debug mode for the navmesh agents
-- Adds a runtime worldspace info UI for the navmesh agents
+<h3>🔧 Improvements</h3>
+<ul>
+  <li>More icons for plugin scripts.</li>
+  <li>General performance improvements.</li>
+  <li>Improved navigation inside the console.</li>
+</ul>
 
-### Quality of life improvement
-- More API for the Gizmos_RaycastTo component.
-- More API for the Gizmos_Collider
-- New icon for the scriptable objects of the commands
-- Simplifies the way the commands have to be made
+<hr>
 
-### Fix
-- Fixies an issue where an empty string would throw an error
-- Fixies an issue where the console text area would sometime bug out when increasing too
-fast in size.
-- Fixies an issue where having a space at the end of a command would fail its process.
-- Fixies a bug where multi keyword commands would not always work.
-- Improves performance of the interactive console.
+<h2>🔷 Version 1.1.0</h2>
 
-## V 1.0.0
+<h3>✨ Features</h3>
+<ul>
+  <li>Added runtime gizmo debug mode for NavMesh agents.</li>
+  <li>Added world-space UI for NavMesh agents.</li>
+</ul>
 
-### UDT Release :
+<h3>🛠️ Quality of Life</h3>
+<ul>
+  <li>Expanded API for <code>Gizmos_RaycastTo</code> and <code>Gizmos_Collider</code> components.</li>
+  <li>New icon for command scriptable objects.</li>
+  <li>Simplified command creation process.</li>
+</ul>
 
-- In game Console
-- In game gizmos
-- In game FreeCam
-- In game basic metrics
+<h3>🐞 Fixes</h3>
+<ul>
+  <li>Fixed a crash when using an empty string as a command.</li>
+  <li>Fixed console text area layout issues on rapid size increase.</li>
+  <li>Fixed issue with trailing spaces breaking command execution.</li>
+  <li>Fixed multi-keyword command parsing inconsistencies.</li>
+  <li>Improved performance of the interactive console.</li>
+</ul>
+
+<hr>
+
+<h2>🎉 Version 1.0.0 – Initial Release</h2>
+
+<h3>Included</h3>
+<ul>
+  <li>In-game console.</li>
+  <li>In-game gizmos.</li>
+  <li>In-game FreeCam.</li>
+  <li>Basic metrics system.</li>
+</ul>
