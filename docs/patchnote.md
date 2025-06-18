@@ -1,64 +1,84 @@
-# Patch Note
+# 📝 Patch Notes
+<p>This section logs all updates and additions to <strong>UDT</strong> since release.</p>
 
-This section is the log of all the changes and additions to UDT since release.
+<hr>
 
-## V1.4
-### Feature
--Mobile Support
--Discord ticketing
+<h2>🔷 Version 1.3</h2>
 
-### Improvements
--UI button for metrics.
+<h3>✨ Features</h3>
+<ul>
+  <li>Trello ticketing to simplify bug collection during playtests and post-launch.</li>
+  <li>2D Gizmos support.</li>
+</ul>
 
-## V1.3
-### Feature
--Trello ticketing, to make you able to simplify the bug collection in playtests and post launch.
--2D Gizmos
+<h3>🔧 Improvements</h3>
+<ul>
+  <li>Custom inspectors for gizmos to simplify usage.</li>
+  <li>Command prediction in the console.</li>
+</ul>
 
-### Improvements
--Custom inspectors for the gizmos to simplify their usage
--Command prediction in the console 
+<hr>
 
-## V1.2.1
-### Fix
--A major issue in the static command check
--Removes some dev logs
+<h2>🔹 Version 1.2.1</h2>
 
-## V1.2.0
-### Features
-- Adds Commands for static functions as code attributes
-- Adds Metrics graphic plot 
-- Adds metrics for audio and memory usage
+<h3>🐞 Fixes</h3>
+<ul>
+  <li>Fixed a major issue in static command validation.</li>
+  <li>Removed leftover development logs.</li>
+</ul>
 
-### Improvements
-- More icons for the scripts of the plugin
-- Performance improvements
-- Console navigation improvement
+<hr>
 
-## V 1.1.0
-### Features
-- Adds a runtime gizmos debug mode for the navmesh agents
-- Adds a runtime worldspace info UI for the navmesh agents
+<h2>🔷 Version 1.2.0</h2>
 
-### Quality of life improvement
-- More API for the Gizmos_RaycastTo component.
-- More API for the Gizmos_Collider
-- New icon for the scriptable objects of the commands
-- Simplifies the way the commands have to be made
+<h3>✨ Features</h3>
+<ul>
+  <li>Added support for static function commands via code attributes.</li>
+  <li>Added graphical plotting for metrics.</li>
+  <li>Added metrics for audio and memory usage.</li>
+</ul>
 
-### Fix
-- Fixies an issue where an empty string would throw an error
-- Fixies an issue where the console text area would sometime bug out when increasing too
-fast in size.
-- Fixies an issue where having a space at the end of a command would fail its process.
-- Fixies a bug where multi keyword commands would not always work.
-- Improves performance of the interactive console.
+<h3>🔧 Improvements</h3>
+<ul>
+  <li>More icons for plugin scripts.</li>
+  <li>General performance improvements.</li>
+  <li>Improved navigation inside the console.</li>
+</ul>
 
-## V 1.0.0
+<hr>
 
-### UDT Release :
+<h2>🔷 Version 1.1.0</h2>
 
-- In game Console
-- In game gizmos
-- In game FreeCam
-- In game basic metrics
+<h3>✨ Features</h3>
+<ul>
+  <li>Added runtime gizmo debug mode for NavMesh agents.</li>
+  <li>Added world-space UI for NavMesh agents.</li>
+</ul>
+
+<h3>🛠️ Quality of Life</h3>
+<ul>
+  <li>Expanded API for <code>Gizmos_RaycastTo</code> and <code>Gizmos_Collider</code> components.</li>
+  <li>New icon for command scriptable objects.</li>
+  <li>Simplified command creation process.</li>
+</ul>
+
+<h3>🐞 Fixes</h3>
+<ul>
+  <li>Fixed a crash when using an empty string as a command.</li>
+  <li>Fixed console text area layout issues on rapid size increase.</li>
+  <li>Fixed issue with trailing spaces breaking command execution.</li>
+  <li>Fixed multi-keyword command parsing inconsistencies.</li>
+  <li>Improved performance of the interactive console.</li>
+</ul>
+
+<hr>
+
+<h2>🎉 Version 1.0.0 – Initial Release</h2>
+
+<h3>Included</h3>
+<ul>
+  <li>In-game console.</li>
+  <li>In-game gizmos.</li>
+  <li>In-game FreeCam.</li>
+  <li>Basic metrics system.</li>
+</ul>

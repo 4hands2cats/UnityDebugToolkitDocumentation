@@ -1,6 +1,8 @@
 # Static commands
 
-> Introduced in V1.2
+<div style="border-left: 4px solid #4CAF50; background: #f0fff4; padding: 0.75em 1em; margin: 1em 0;">
+  🆕 <strong>Introduced in version 1.2</strong>
+</div>
 
 There is now a way to directly create debug command for the console in your code base using attributes. 
 
@@ -73,7 +75,8 @@ You can find this script in the sample folder.
      }
  }
 ```
+<div style="border-left: 4px solid #ffa500; padding: 1em; background: #fff8e1;">
+There is no support yet for non-static methods but its doable. If you feel like you are needing those, just contact us on the discord.
 
-> There is no support yet for non-static methods but its doable. If you feel like you are needing those, just contact us on the discord.
-
-> If you are wondering how it works behind the scene don't hesitate to contact us :D
+If you are wondering how it works behind the scene don't hesitate to contact us :D
+</div>

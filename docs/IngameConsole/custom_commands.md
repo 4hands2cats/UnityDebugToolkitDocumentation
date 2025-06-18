@@ -2,7 +2,10 @@
 
 The command system is based on scriptable objects. Scriptables object are really practical to use because they are Gameobject and scene agnostic.
 
-> We are planning on making an API to create commands using C# attributs which'll give you two options to create your console commands.
+<div style="border-left: 4px solid #ffa500; padding: 1em; background: #fff8e1;">
+We are planning on making an API to create commands using C# attributs which'll give you two options to create your console commands.
+</div>
+
 
 ___ 
 
@@ -47,4 +50,7 @@ Then in the script you need to :
 ![alt text](../assets/BindCommand.png)
 
 ___
-> Note : You can find the existing commands used in the toolkit the 4Hands2Cats/DebugToolkit/Console/Interaction/CommandData folder.
+<div style="border-left: 4px solid #ffa500; padding: 1em; background: #fff8e1;">
+<strong>Note</strong>
+You can find the existing commands used in the toolkit the 4Hands2Cats/DebugToolkit/Console/Interaction/CommandData folder.
+</div>

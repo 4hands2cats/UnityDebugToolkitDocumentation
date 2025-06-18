@@ -6,7 +6,10 @@ To use type *freecam*/*Freecam* followed by *enable* or *disable* to enable or d
 
 Though this embeded in the package, the freecam comes as stand alone feature. Feel free to use it for your gameplay if you want. 
 
-> Future versions of the cam should be compatible with cinemachine. 
+
+<div style="border-left: 4px solid #ffa500; padding: 1em; background: #fff8e1;">
+Future versions of the cam should be compatible with cinemachine.
+</div>
 
 The prefab for this one is in the same folder as the console.  
 
@@ -14,4 +17,7 @@ The prefab for this one is in the same folder as the console.
 
 To use as a stand alone feature just drag and drop the prefab in your scene.
 
-> Note : If you use it as stand alone feature it'll not be control anymore by the console.
+<div style="border-left: 4px solid #ffa500; padding: 1em; background: #fff8e1;">
+<strong>Note</strong>
+If you use it as stand alone feature it'll not be control anymore by the console.
+</div>

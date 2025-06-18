@@ -1,27 +1,33 @@
-- [Home](/)
-- Getting Started
-  - [Introduction](getting-started/introduction.md)
-  - [Installation](getting-started/installation.md)
-  - [DemoSceneTour](getting-started/demo.md)
-  - [Quick Start](getting-started/quick-start.md)
-- Features
-  - [In Game Console](features/console.md)
-      - [Make your own commands](IngameConsole/custom_commands.md)
-      - [Static Commands](IngameConsole/staticCommands.md)
-      - [Command Prediction](IngameConsole/CommandPrediction.md)
-  - [Gizmos](features/gizmos.md)
-  - [FreeCam](features/freecam.md)
-  - [Metrics](features/metrics.md)
-  - [NavMesh](features/navmesh.md)
-  - [Bug Report](BugReport/bugRepport.md)
-      - [Board setup](BugReport/boardSetUp.md)
-      - [Enable feature](BugReport/enablefeature.md)
-      - [Report a bug](BugReport/ReportABug.md)
-- [APIs](apis/apis.md)
-  - [Collider Gizmos](apis/collider_gizmos.md)
-  - [RaycastTo Gizmos](apis/raycastTo_gizmos.md)
-  - [Console](apis/console.md)
+- [🏠 Home](/)
 
-- [FAQ](faq.md)
-- [What's next](whatNext.md)
-- [Patch Note](patchnote.md)
+- 🛠️ Getting Started
+  - [📘 Introduction](getting-started/introduction.md)
+  - [💾 Installation](getting-started/installation.md)
+  - [🎬 Demo Scene Tour](getting-started/demo.md)
+  - [⚡ Quick Start](getting-started/quick-start.md)
+
+- ✨ Features
+  - [💻 In-Game Console](features/console.md)
+    - [🛠️ Make Your Own Commands](IngameConsole/custom_commands.md)
+    - [📄 Static Commands](IngameConsole/staticCommands.md)
+    - [🔮 Command Prediction](IngameConsole/CommandPrediction.md)
+  - [🎯 Gizmos](features/gizmos.md)
+  - [🎥 FreeCam](features/freecam.md)
+  - [📊 Metrics](features/metrics.md)
+  - [🧭 NavMesh](features/navmesh.md)
+  - [🐞 Bug Reporting](BugReport/bugRepport.md)
+    - [📋 Trello Setup](BugReport/TrelloBoardSetUp.md)
+    - [💬 Discord Setup](BugReport/DiscordBoardSetUp.md)
+    - [🟢 Enable Feature](BugReport/enablefeature.md)
+    - [📝 Report a Bug](BugReport/ReportABug.md)
+
+- 📚 API Reference
+  - [🧱 Collider Gizmos](apis/collider_gizmos.md)
+  - [📡 RaycastTo Gizmos](apis/raycastTo_gizmos.md)
+  - [⌨️ Console API](apis/console.md)
+
+- [❓ FAQ](faq.md)
+- [🚀 What's Next](whatNext.md)
+- [📝 Patch Notes](patchnote.md)
+
+

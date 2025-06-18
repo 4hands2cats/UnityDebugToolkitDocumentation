@@ -15,5 +15,7 @@ To use : there are 3 commands available in the interactive console.
 
 This features cannot be used as a standalone yet.
 
-
-> Note : Do not hesitate to request more features for the navmesh debbuging.
+<div style="border-left: 4px solid #ffa500; padding: 1em; background: #fff8e1;">
+<strong>Note</strong>
+Do not hesitate to request more features for the navmesh debbuging.
+</div>

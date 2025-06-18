@@ -1,26 +1,28 @@
-# What's next ?
+# 🚀 What's Next?
 
-## Usability
+<h2>Usability</h2>
+<ul>
+  <li>Custom inspector for all components.</li>
+  <li>Completion of the Gizmos API.</li>
+  <li>System based on C# attributes to create your own commands directly in code while keeping the ScriptableObject workflow.</li>
+  <li>Command auto-completion.</li>
+</ul>
 
-- Custom inspector for all components
-- Completing the Gizmos API
-- A system based on C# attributes to make your own commands directly in code while keeping the scriptable object work flow.
-- Command auto-completion
+<h2>Features</h2>
+<ul>
+  <li>Cinemachine-based FreeCam.</li>
+  <li>Profiling features.</li>
+  <li>Export logs and metrics to a file or remote endpoint for post-processing (e.g. spreadsheet analysis).</li>
+  <li>VR/XR support for the console.</li>
+</ul>
 
-## Features
+<h2>Known Issues</h2>
+<p>Awaiting your feedback!</p>
 
-- A cinemachine freeCam
-- Profiling features
-- A way to create your own commands using a code API.
-- A way to print the logs and the metrics to send them to an adress or post process the result using a spreadshit.
-- 2D support for colliders
-- Mobile device support for the console.
-- VR/XR support for the console.
+<hr>
 
-## Known issues
+<p>
+  Is there a feature you need? Feel free to ask on our <a href="https://discord.gg/8M5q85Ea" target="_blank">dedicated Discord server</a> and we'll see what we can do.<br>
+  Our goal is to improve this asset as much as possible so it fulfills all your debugging needs on your Unity Engine journey.
+</p>
 
-Awaiting for your feedbacks
-
----
-
-Is there a feature you need? Feel free to ask on the dedicated discord server and we'll see what we can do. Our goal is to improve this asset as much as possible so it fullfills all your needs in term of debuging in your Unity Engine journey.

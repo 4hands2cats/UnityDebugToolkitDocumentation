@@ -1,7 +1,10 @@
 # Debug Toolkit for Unity (UDT)
 
-> Thanks for using the UDT.
-> Unity 6+ is supported for this asset.
+<div style="border-left: 4px solid #ffa500; padding: 1em; background: #fff8e1;">
+Thanks for using the UDT.
+Unity 6+ is supported for this asset.
+</div>
+
 
 This documentation aims to get you ready to use and modify UDT for your awesome projects.
 

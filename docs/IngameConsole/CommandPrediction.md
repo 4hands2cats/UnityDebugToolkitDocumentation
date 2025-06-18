@@ -1,6 +1,8 @@
 # Command Prediction
 
-> Introduced in version 1.3
+<div style="border-left: 4px solid #4CAF50; background: #f0fff4; padding: 0.75em 1em; margin: 1em 0;">
+  🆕 <strong>Introduced in version 1.3</strong>
+</div>
 
 This feature makes navigation in the console easier. 
 

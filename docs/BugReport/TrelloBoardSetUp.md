@@ -1,10 +1,12 @@
-# Set up your board
+# Set up the Trello bug report
 
-> Introduced in V 1.3
+<div style="border-left: 4px solid #4CAF50; background: #f0fff4; padding: 0.75em 1em; margin: 1em 0;">
+  🆕 <strong>Introduced in version 1.3</strong>
+</div>
 
 The set up is really guided thanks to a custom inspector. The main idea is to store your board information in a scriptable object. Thanks to this process you can have multiple boards for your project. Maybe you want each playtest to have its own board. 
 
-For this par you are going to need a Trello account. Since your API key and Token are going to be present in your build we most advise to make a new account for the debug toolkit.
+For this part you are going to need a Trello account. Since your API key and Token are going to be present in your build we most advise to make a new account for the debug toolkit.
 
 ## Step 1 : Create the scriptable object
 Right click and create the SO

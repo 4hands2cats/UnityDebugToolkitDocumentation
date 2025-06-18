@@ -1,4 +1,7 @@
-> ---
->
-> © 2025 4Hands2Cats
-> [Discord](https://discord.gg/8M5q85Ea) | [About Us](about.md)
+<hr>
+
+<footer style="text-align: center; font-size: 0.9em; color: #888; margin-top: 2em;">
+  © 2025 <strong>4Hands2Cats</strong><br>
+  <a href="https://discord.gg/AE6JKG7xnK" target="_blank">💬 Join our Discord</a> • 
+  <a href="about.md">📘 About Us</a>
+</footer>

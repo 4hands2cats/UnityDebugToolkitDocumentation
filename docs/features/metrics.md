@@ -36,4 +36,7 @@ You can use the metrics as a stand alone feature by drag and dropping it in your
 
 ![alt text](../assets/Metrics_1.png)
 
-> Note : If you use the metrics as a standalone feature, it'll not be managed by the console anymore.
+<div style="border-left: 4px solid #ffa500; padding: 1em; background: #fff8e1;">
+<strong>Note</strong>
+If you use the metrics as a standalone feature, it'll not be managed by the console anymore.
+</div>

@@ -1,6 +1,8 @@
 # Install UDT
 
-> Make sure that you are using Unity 6 or above.
+<div style="border-left: 4px solid #ffa500; padding: 1em; background: #fff8e1;">
+Make sure that you are using Unity 6 or above.
+</div>
 
 ## Package manager
 Get into the unity package manager at the top of the Unity Engine window and look for UDT in your assets 
