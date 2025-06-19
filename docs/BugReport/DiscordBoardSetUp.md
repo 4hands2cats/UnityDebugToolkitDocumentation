@@ -71,9 +71,9 @@ Now you've got to install .Net on your computer. Go in your visual studio instal
 
 ![alt text](../assets/BugReport/Discord/CloudCode/DotNet.png)
 
-Make sure your projet is connect to Unity services. ProjectSettings > Services. If you don't have a unity project ID. Please get one.
+Make sure your projet is connected to Unity services. ProjectSettings > Services. If you don't have a unity project ID. Please get one.
 
-In the folder 4Hands2Cats/DebugToolkit/ReportForm/CloudModules/DiscordModule click on the DiscordThread Asset and in the inspector click on generate solution. It should compile for a few minutes (basically it create yet another C# project in visual studio). 
+In the folder 4Hands2Cats/DebugToolkit/ReportForm/CloudModules/DiscordModule right click and create a new cloud code module. Then click on the DiscordThread Asset and in the inspector click on generate solution. It should compile for a few minutes (basically it create yet another C# project in visual studio). 
 
 Now go to the project and replace the sample script by this one and replace the Token by the token of your bot and forum channel id by the one of your forum.
 You should rename the sample script like : DiscordThreadCreator.cs.
