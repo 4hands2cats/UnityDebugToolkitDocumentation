@@ -1,4 +1,6 @@
+
 # Gizmos
+
 As you now there is already an API in unity to draw gizmos for debugging purposes. But you cannot draw gizmos for run time. Those gizmos are harvesting the power of the **GL** API to show performance friendly gizmos at runtime for quite anything. 
 
 There are two way of using the gizmos. Manual and automatic using the console. 
@@ -43,3 +45,5 @@ You just have to give it a ref to a gameobject and it'll draw a ray to it and up
 
 ___
 We are planning on adding custom editors in the future to simplify the usage of those features. Please take a look at the section [Gizmos API](../apis/api_gizmos.md) to learn about the code API for the gizmos.
+
+<div style="page-break-after: always;"></div>

@@ -43,3 +43,5 @@ public static void Log(string message, LogColor logColor = LogColor.Default, Log
 ```
 
 > For know only **int**, **bool** and **string** are supported, but feel free to request more functionalities.
+
+<div style="page-break-after: always;"></div>

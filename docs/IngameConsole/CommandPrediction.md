@@ -1,3 +1,4 @@
+
 # Command Prediction
 
 <div style="border-left: 4px solid #4CAF50; background: #f0fff4; padding: 0.75em 1em; margin: 1em 0;">
@@ -16,4 +17,6 @@ The complexity is related to the length of the commands and not to the total amo
 When a command is selected it appears in the console, you can either complete it or just execute it pressing enter.
 
 ![alt text](../assets/Console/ConsoleCommandPrediction.PNG)
+
+<div style="page-break-after: always;"></div>
 

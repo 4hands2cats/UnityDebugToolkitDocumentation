@@ -23,3 +23,5 @@ If you make your own please show them to us, maybe they could be integrated in t
 
 ## Console
 You can use the **DebugLog** API of the in-game console to print logs in the in-game console directly.
+
+<div style="page-break-after: always;"></div>

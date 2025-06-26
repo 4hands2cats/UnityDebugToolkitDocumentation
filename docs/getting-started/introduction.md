@@ -1,10 +1,15 @@
+
 # Introduction to UDT
 
-This toolkit aims to make your life easier while debugging your game.\
-In this version we focused on the run time debugging
+This toolkit focuses on runtime debugging and offers a variety of features to improve your workflow and help you resolve bugs efficiently.
 
-We are aiming for a load of improvements in the future versions of this toolkit. If you want to now more about the next features please check the [What's Next](whatNext.md) section.
+The asset can also be used seamlessly within the Unity editor, and many features are reusable directly in your games.
+
+We have many exciting improvements planned for future releases. To learn more about upcoming features, please visit the [What's Next](whatNext.md) section.  
 ___
 
-In the next few sections you are going to learn how to import UDT to your project and how to use it.
+In the following sections, you will discover how to import UDT into your project and get started using its powerful features.
+
+
+
 

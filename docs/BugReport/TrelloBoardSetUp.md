@@ -1,4 +1,5 @@
-# Set up the Trello bug report
+
+# Trello Setup
 
 <div style="border-left: 4px solid #4CAF50; background: #f0fff4; padding: 0.75em 1em; margin: 1em 0;">
   🆕 <strong>Introduced in version 1.3</strong>
@@ -57,3 +58,5 @@ This is the last step !!
 Name your Workspace, board and the list where the bugs are going to be reported. And press Init trello. You should see some messages in the Unity consol. If you get any error please contact support on the discord.
 
 ![alt text](../assets/BugReport/BoardNaming.png)
+
+<div style="page-break-after: always;"></div>

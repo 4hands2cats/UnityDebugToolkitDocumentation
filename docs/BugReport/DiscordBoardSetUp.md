@@ -1,4 +1,5 @@
-# Set Up the Discord Bug report
+
+# Discord Setup
 
 <div style="border-left: 4px solid #4CAF50; background: #f0fff4; padding: 0.75em 1em; margin: 1em 0;">
   🆕 <strong>Introduced in version 1.4</strong>
@@ -169,3 +170,5 @@ Now launch the scene and test it out. >Reminder : F11 to open the bug report for
   <strong>Note:</strong><br>
 If you encounter any issue please contact support in the discord server.
 </div>
+
+<div style="page-break-after: always;"></div>

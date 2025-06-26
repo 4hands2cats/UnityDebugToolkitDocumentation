@@ -1,3 +1,4 @@
+
 # 🚀 What's Next?
 
 <h2>Usability</h2>
@@ -25,4 +26,6 @@
   Is there a feature you need? Feel free to ask on our <a href="https://discord.gg/8M5q85Ea" target="_blank">dedicated Discord server</a> and we'll see what we can do.<br>
   Our goal is to improve this asset as much as possible so it fulfills all your debugging needs on your Unity Engine journey.
 </p>
+
+<div style="page-break-after: always;"></div>
 

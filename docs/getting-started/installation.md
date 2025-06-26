@@ -1,3 +1,4 @@
+
 # Install UDT
 
 <div style="border-left: 4px solid #ffa500; padding: 1em; background: #fff8e1;">
@@ -13,6 +14,8 @@ Click on the **download** button at the bottom right of the menu.
 
 Once the files are downloaded, import them in your project by clicking on the **Import** button.
 
+![alt text](../assets/AssetInFolder.png)
+
 The toolkit is in the 4Hands2Cats folder. In the future if we do more assets they'll install in this folder as well.
 
-![alt text](../assets/AssetInFolder.png)
+

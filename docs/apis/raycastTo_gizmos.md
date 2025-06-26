@@ -16,3 +16,5 @@ Those methods are pretty simple to come around. Either pass a GameObject or a po
         // Logic
     }
 ```
+
+<div style="page-break-after: always;"></div>

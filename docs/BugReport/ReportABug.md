@@ -1,3 +1,4 @@
+
 # Report a bug
 
 <div style="border-left: 4px solid #4CAF50; background: #f0fff4; padding: 0.75em 1em; margin: 1em 0;">
@@ -11,3 +12,5 @@ Write your description end press the send button.
 That's it. 
 
 If you get errors, or if the card is not created on your Trello, feel free to contact support on the discord.
+
+<div style="page-break-after: always;"></div>

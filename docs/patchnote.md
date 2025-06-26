@@ -1,3 +1,4 @@
+
 # 📝 Patch Notes
 <p>This section logs all updates and additions to <strong>UDT</strong> since release.</p>
 
@@ -82,3 +83,5 @@
   <li>In-game FreeCam.</li>
   <li>Basic metrics system.</li>
 </ul>
+
+<div style="page-break-after: always;"></div>

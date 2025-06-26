@@ -1,3 +1,4 @@
+
 # Debug Toolkit for Unity (UDT)
 
 <div style="border-left: 4px solid #ffa500; padding: 1em; background: #fff8e1;">
@@ -12,7 +13,8 @@ The current version of the toolkit 1.0.
 
 If you are looking for the last patch note please check the [Patch Notes](patchnote.md).
 If you are looking for features in development take a look at the [What's Next](whatNext.md) section.
-[Discord](https://discord.gg/AE6JKG7xnK)
+
+**Join us on** [Discord](https://discord.gg/AE6JKG7xnK) to directly talk to the developpement team.
 
 ---
 
@@ -25,3 +27,6 @@ UDT is composed of many elements :
 - A FreeCam to inspect your scene at runtime. With a simple command in the console activate or deactivate the FreeCam and navigate through your scene.
 - A metrics system to now your fps, the number of batches, and your tris/vert usage.
 - A runtime navmesh debugger.
+
+<div style="page-break-after: always;"></div>
+

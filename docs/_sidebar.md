@@ -29,5 +29,3 @@
 - [❓ FAQ](faq.md)
 - [🚀 What's Next](whatNext.md)
 - [📝 Patch Notes](patchnote.md)
-
-
