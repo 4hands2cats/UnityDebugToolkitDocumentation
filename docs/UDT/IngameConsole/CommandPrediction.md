@@ -15,3 +15,4 @@ When a command is selected it appears in the console, you can either complete it
 
 ![alt text](../assets/Console/ConsoleCommandPrediction.PNG)
 
+<div style="page-break-after: always;"></div>

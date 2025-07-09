@@ -38,3 +38,5 @@ You can use the metrics as a stand alone feature by drag and dropping it in your
 <strong>Note</strong>
 If you use the metrics as a standalone feature, it'll not be managed by the console anymore.
 </div>
+
+<div style="page-break-after: always;"></div>

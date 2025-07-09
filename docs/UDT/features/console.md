@@ -73,3 +73,5 @@ Each feature has its family of commands.
 ## Log in the console only
 
 There is an API to log in the in-game console only. Go in the section [Console](apis/console.md) to discover how to use it. Don't forget that the logs from Unity are retargeted to the console anyway.
+
+<div style="page-break-after: always;"></div>

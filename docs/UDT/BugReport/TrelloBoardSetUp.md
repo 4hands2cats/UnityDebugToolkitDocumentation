@@ -55,3 +55,5 @@ This is the last step !!
 Name your Workspace, board and the list where the bugs are going to be reported. And press Init trello. You should see some messages in the Unity consol. If you get any error please contact support on the discord.
 
 ![alt text](../assets/BugReport/BoardNaming.png)
+
+<div style="page-break-after: always;"></div>

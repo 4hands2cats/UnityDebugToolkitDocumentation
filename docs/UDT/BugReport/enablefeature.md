@@ -13,3 +13,5 @@ There is a dropdown menu of the report manager select the Report Target you've s
 <strong>Note</strong>
 You can change the Trello settings to interact with multiple boards. 
 </div>
+
+<div style="page-break-after: always;"></div>

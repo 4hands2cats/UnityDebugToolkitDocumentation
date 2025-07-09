@@ -25,3 +25,6 @@ UDT is composed of many elements :
 - A FreeCam to inspect your scene at runtime. With a simple command in the console activate or deactivate the FreeCam and navigate through your scene.
 - A metrics system to now your fps, the number of batches, and your tris/vert usage.
 - A runtime navmesh debugger.
+
+
+<div style="page-break-after: always;"></div>

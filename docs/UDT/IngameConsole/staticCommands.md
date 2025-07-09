@@ -78,3 +78,6 @@ There is no support yet for non-static methods but its doable. If you feel like 
 
 If you are wondering how it works behind the scene don't hesitate to contact us :D
 </div>
+
+
+<div style="page-break-after: always;"></div>

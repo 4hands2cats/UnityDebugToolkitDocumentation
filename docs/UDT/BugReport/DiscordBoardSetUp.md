@@ -167,3 +167,7 @@ Now launch the scene and test it out. >Reminder : F11 to open the bug report for
   <strong>Note:</strong><br>
 If you encounter any issue please contact support in the discord server.
 </div>
+
+</div>
+
+<div style="page-break-after: always;"></div>
