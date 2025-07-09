@@ -1,40 +1,35 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8">
-  <title>My Documentation</title>
-  <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1" />
-  <meta name="description" content="Description">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0, minimum-scale=1.0">
-  <link rel="stylesheet" href="//cdn.jsdelivr.net/npm/docsify/themes/dark.css" />
-  <link
-    rel="stylesheet"
-    media="(prefers-color-scheme: light)"
-    href="//cdn.jsdelivr.net/npm/prism-themes@1/themes/prism-one-light.min.css"
-  />
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>4Hands2Cats Docs</title>
+
+  <link rel="stylesheet" href="styles/landing.css" />
 </head>
 <body>
-  <div id="app">Please wait...</div>
+  <main class="landing-wrapper">
+    <img src="assets/logo.png" alt="Logo" width="100" />
+    <h1>Welcome to 4Hands2Cats Docs</h1>
+    <p>Choose a documentation set:</p>
+    
+    <div class="links">
+      <div class="links-row">
+        <a href="/UDT/">📘 UDT (Universal Debug Toolkit)</a>
+        <a href="/EGT/">🎮 EGT (Escape Game Toolkit)</a>
+      </div>
+      <div class="links-row single">
+        <a href="https://discord.gg/AE6JKG7xnK" target="_blank">
+          <img src="https://cdn.jsdelivr.net/npm/simple-icons@v11/icons/discord.svg" alt="Discord" class="icon" />
+          Join the official Discord
+        </a>
+      </div>
+    </div>
+  </main>
 
-  <div class="nav-buttons">
-    <button id="prevBtn" class="nav-btn">Previous</button>
-    <button id="nextBtn" class="nav-btn">Next</button>
-  </div>
-
-  <script>
-    window.$docsify = {
-      name: 'UDT Documentation',
-      repo: '',
-      logo: 'assets/logo.png',
-      loadSidebar: true,
-      loadNavbar: true,
-      loadFooter: true
-    };
-  </script>
-  
-  <script src="//cdn.jsdelivr.net/npm/docsify/lib/docsify.min.js"></script>
-  <script src="//cdn.jsdelivr.net/npm/@alertbox/docsify-footer/dist/docsify-footer.min.js"></script>
-  <script src="//cdn.jsdelivr.net/npm/prismjs@1/components/prism-csharp.min.js"></script>
+<footer class="global-footer">
+  © 2025 <strong>4Hands2Cats</strong><br>
+  <a href="/about.html">📘 About Us</a>
+</footer>
 </body>
-
 </html>

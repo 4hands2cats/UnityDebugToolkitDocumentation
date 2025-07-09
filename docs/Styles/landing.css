@@ -1,0 +1,80 @@
+body {
+  margin: 0;
+  font-family: 'Segoe UI', sans-serif;
+  background: linear-gradient(to bottom right, #485150, #1c1f21);
+  color: #c3c3c3;
+  display: flex;
+  flex-direction: column;
+  min-height: 100vh;
+}
+
+.landing-wrapper {
+  flex: 1;
+  padding: 2em;
+  text-align: center;
+}
+
+.landing-wrapper h1 {
+  font-size: 2.5em;
+  margin-bottom: 0.5em;
+  color: antiquewhite;
+}
+
+.landing-wrapper {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  padding: 2em;
+  text-align: center;
+}
+
+.links {
+  display: flex;
+  flex-direction: column;
+  gap: 1em;
+}
+
+.links-row {
+  display: flex;
+  justify-content: center;
+  gap: 1.5em;
+  flex-wrap: wrap;
+}
+
+.links-row.single {
+  justify-content: center;
+}
+
+.links a {
+  display: inline-flex;
+  align-items: center;
+  padding: 0.75em 1.5em;
+  background: #5865F2; /* Discord blurple */
+  color: white;
+  border-radius: 8px;
+  text-decoration: none;
+  font-weight: 500;
+  transition: background 0.3s ease;
+}
+
+.links a:hover {
+  background: #c8ccf6;
+}
+
+.icon {
+  width: 20px;
+  height: 20px;
+  margin-right: 0.5em;
+  display: inline-flex;
+  vertical-align: bottom;
+  filter: invert(100%);
+}
+
+.global-footer {
+  text-align: center;
+  font-size: 0.9em;
+  color: #888;
+  padding: 1em;
+}

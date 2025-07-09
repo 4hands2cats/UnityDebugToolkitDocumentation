@@ -1,0 +1,37 @@
+
+    h1 {
+      text-align: center;
+      color: #444;
+      margin-bottom: 1.5rem;
+    }
+    p {
+      font-size: 1.1rem;
+    }
+    footer {
+      margin-top: 3rem;
+      text-align: center;
+      font-size: 0.9rem;
+      color: #666;
+    }
+    nav {
+  background: #222;
+  padding: 0.8em 1em;
+  text-align: center;
+  border-radius: 6px;
+  margin-bottom: 2rem;
+}
+
+nav a {
+  color: #eee;
+  text-decoration: none;
+  margin: 0 1.2em;
+  font-weight: 600;
+  font-size: 1.1rem;
+  transition: color 0.3s ease;
+}
+
+nav a:hover,
+nav a:focus {
+  color: #4caf50; /* nice green highlight */
+  outline: none;
+}
