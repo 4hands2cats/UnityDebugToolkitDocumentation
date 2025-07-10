@@ -1,6 +1,7 @@
 <hr>
 <head>
-  <link rel="stylesheet" href="../styles/docsifyFooter.css" />
+  <base href="/UnityDebugToolkitDocumentation/">
+  <link rel="stylesheet" href="Styles/docsifyFooter.css" />
 </head>
 
 <footer class="global-footer">
