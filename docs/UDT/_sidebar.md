@@ -1,7 +1,7 @@
 - [🏠 Home](/)
 
 - 🛠️ Getting Started
-  - [📘 Introduction](UDT/getting-started/introduction.md)
+  - [📘 Introduction](getting-started/introduction.md)
   - [💾 Installation](getting-started/installation.md)
   - [🎬 Demo Scene Tour](getting-started/demo.md)
   - [⚡ Quick Start](getting-started/quick-start.md)

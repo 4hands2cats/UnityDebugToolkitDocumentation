@@ -24,9 +24,9 @@
 <body>
 
   <nav>
-    <a href="">Home</a>
-    <a href="UDT/#/">Debug Toolkit</a>
-    <a href="EGT/#/">Escape Game Toolkit</a>
+    <a href="../">Home</a>
+    <a href="../UDT/#/">Debug Toolkit</a>
+    <a href="../EGT/#/">Escape Game Toolkit</a>
   </nav>
   <div id="app">Please wait...</div>
 
@@ -44,7 +44,11 @@
       onlyCover: true,
       executeScript: true,
       mergeNavbar: true,
-      relativePath: true
+      relativePath: true,
+      alias: {
+        '/UDT/.*/_sidebar.md': '/UDT/_sidebar.md',
+        '/UDT/.*/_navbar.md': '/UDT/_navbar.md'
+      }
     };
   </script>
 
