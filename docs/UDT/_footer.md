@@ -9,5 +9,5 @@
     <img src="https://cdn.jsdelivr.net/npm/simple-icons@v11/icons/discord.svg" alt="Discord" class="icon" />
     Join the official Discord
   </a>
-  <a href="/about.html">📘 About Us</a>
+  <a href="about.html">📘 About Us</a>
 </footer>
