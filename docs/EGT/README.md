@@ -14,8 +14,28 @@ You can support our progress by getting one of the smaller toolkits!
 
 ___
 
-<!-- ✅ Now Available: Inventory Toolkit
+## Current state of the toolkit
+⌛ Next to be released : The Inventory Toolkit 🟩🟩🟩🟩🟩🟩🟩🟩⬜⬜ 85% Ready
+<!-- ✅ Now Available: Inventory Toolkit -->
 The Inventory Toolkit is the first release in the EGT pack. It gives you powerful tools to build flexible, intuitive inventory systems for your escape game.
 
-📢 Join our Discord to request features, share ideas, or give feedback. Your input helps shape the future of the toolkit! -->
+📢 Join our Discord to request features, share ideas, or give feedback. Your input helps shape the future of the toolkit!
+
+___
+❌ Not released yet : The Settings Menu Toolkit 🟨🟨🟨🟨🟨🟨🟨⬜⬜⬜ 65% Ready
+
+___
+❌ Not released yet : The status system 🟧🟧🟧⬜⬜⬜⬜⬜⬜⬜ 30% Ready
+
+___
+❌ Not released yet : The Dialogue system 🟥⬜⬜⬜⬜⬜⬜⬜⬜⬜ 10% Ready
+
+___
+❌ Not released yet : The Quest System 🟥⬜⬜⬜⬜⬜⬜⬜⬜⬜ 10% Ready
+
+___
+❌ Not release yet : The Scenario System ⬜⬜⬜⬜⬜⬜⬜⬜⬜⬜ 0% Ready
+
+More system are going to be added 
+
 <div style="page-break-after: always;"></div>
