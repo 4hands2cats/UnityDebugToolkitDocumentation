@@ -15,7 +15,7 @@ You can support our progress by getting one of the smaller toolkits!
 ___
 
 ## Current state of the toolkit
-⌛ Next to be released : The Inventory Toolkit 🟩🟩🟩🟩🟩🟩🟩🟩⬜⬜ 85% Ready
+⌛ **Next to be released : The Inventory Toolkit** 🟩🟩🟩🟩🟩🟩🟩🟩⬜⬜ 85% Ready
 <!-- ✅ Now Available: Inventory Toolkit -->
 The Inventory Toolkit is the first release in the EGT pack. It gives you powerful tools to build flexible, intuitive inventory systems for your escape game.
 
@@ -23,6 +23,9 @@ The Inventory Toolkit is the first release in the EGT pack. It gives you powerfu
 
 ___
 ❌ Not released yet : The Settings Menu Toolkit 🟨🟨🟨🟨🟨🟨🟨⬜⬜⬜ 65% Ready
+
+___
+❌ Not released yet : The Sprite maker tool 🟨🟨🟨🟨🟨⬜⬜⬜⬜⬜ 50% Ready
 
 ___
 ❌ Not released yet : The status system 🟧🟧🟧⬜⬜⬜⬜⬜⬜⬜ 30% Ready
