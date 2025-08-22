@@ -3,6 +3,8 @@
 
 <hr>
 
+<p>This section logs all updates and additions to <strong>UDT</strong> since release.</p> <hr> <h2>🔷 Version 1.42</h2> <h3>✨ Features</h3> <ul> <li>Benchmark system.</li> <li>Google Sheet export.</li> </ul> <hr> <h2>🔹 Version 1.41</h2> <h3>🔧 Improvements</h3> <ul> <li>Cinemachine 3.0 support.</li> </ul> <h3>🐞 Fixes</h3> <ul> <li>Glitch with the report form.</li> </ul> <hr> <h2>🔷 Version 1.4</h2> <h3>✨ Features</h3> <ul> <li>Mobile support.</li> <li>Discord ticketing.</li> </ul> <h3>🔧 Improvements</h3> <ul> <li>UI button for metrics.</li> </ul> <hr> <h2>🔹 Version 1.31</h2> <h3>✨ Features</h3> <ul> <li>Improves bug report types.</li> <li>Title to bug report.</li> </ul>
+
 <h2>🔷 Version 1.3</h2>
 
 <h3>✨ Features</h3>
