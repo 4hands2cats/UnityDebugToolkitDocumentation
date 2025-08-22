@@ -165,6 +165,10 @@ Once the benchmark is finished just take a look at your google sheet. It should 
 
 If it didn't ... well contact us on discord :D 
 
+## Customization 
+
+Basically the tool works with a spline. Just find the spline the prefab and change it to customize to your needs.
+
 ___ 
 Thanks for using the benchmark package !! 
 If you have any issue or suggestions be our guest and tell us on the discord of the tool !! 
