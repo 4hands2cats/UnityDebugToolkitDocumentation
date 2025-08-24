@@ -1,3 +1,4 @@
+
 # Debug Toolkit for Unity (UDT)
 
 <div style="border-left: 4px solid #ffa500; padding: 1em; background: #fff8e1;">
@@ -25,17 +26,56 @@ UDT is composed of many elements :
 - A FreeCam to inspect your scene at runtime. With a simple command in the console activate or deactivate the FreeCam and navigate through your scene.
 - A metrics system to now your fps, the number of batches, and your tris/vert usage.
 - A runtime navmesh debugger.
-# Introduction to UDT
 
-This toolkit aims to make your life easier while debugging your game.\
-In this version we focused on the run time debugging
 
-We are aiming for a load of improvements in the future versions of this toolkit. If you want to now more about the next features please check the [What's Next](whatNext.md) section.
+<div style="page-break-after: always;"></div>
+
+# Table of Contents
+
+- [🛠️ Getting Started](#debug-toolkit-for-unity-udt) 
+  - [📘 Introduction](#introduction-to-udt)
+  - [💾 Installation](#install-udt)
+  - [⚡ Quick Start](#quick-start)
+  - [🎬 Demo Scene Tour](#demo-scene-tour)
+
+- ✨ Features
+  - [💻 In-Game Console](#console)
+    - [🛠️ Make Your Own Commands](#make-your-own-commands)
+    - [📄 Static Commands](#static-commands)
+    - [🔮 Command Prediction](#command-prediction)
+  - [🎥 Free Cam](#free-cam)
+  - [🎯 Gizmos](#gizmos)
+  - [📊 Metrics](#metrics)
+  - [🧭 NavMesh](#navmesh-debugging)
+
+- [🐞 Bug Report](#bug-report)
+  - [📋 Trello Setup](#trello-setup)
+  - [💬 Discord Setup](#discord-setup)
+  - [🟢 Enable Feature](#enable-feature)
+  - [📝 Report A Bug](#report-a-bug)
+
+- [📚 APIs](#code-apis)
+  - [🧱 Collider Gizmos](#collider-gizmos)
+  - [📡 RaycastTo Gizmos](#raycastto-gizmos)
+  - [⌨️ Console API](#console-api)
+
+- [ℹ️ About](#about)
+- [❓ FAQ](#faq)
+- [🚀 What’s Next](#whats-next)
+- [📝 Patch Notes](#patch-notes)
+
+<div style="page-break-after: always;"></div>
+
+This toolkit focuses on runtime debugging and offers a variety of features to improve your workflow and help you resolve bugs efficiently.
+
+The asset can also be used seamlessly within the Unity editor, and many features are reusable directly in your games.
+
+We have many exciting improvements planned for future releases. To learn more about upcoming features, please visit the [What's Next](whatNext.md) section.  
 ___
 
-In the next few sections you are going to learn how to import UDT to your project and how to use it.
+In the following sections, you will discover how to import UDT into your project and get started using its powerful features.
 
-# Install UDT
+
 
 <div style="border-left: 4px solid #ffa500; padding: 1em; background: #fff8e1;">
 Make sure that you are using Unity 6 or above.
@@ -50,16 +90,17 @@ Click on the **download** button at the bottom right of the menu.
 
 Once the files are downloaded, import them in your project by clicking on the **Import** button.
 
+![alt text](../assets/AssetInFolder.png)
+
 The toolkit is in the 4Hands2Cats folder. In the future if we do more assets they'll install in this folder as well.
 
-![alt text](../assets/AssetInFolder.png)
+
 As you just seen in the demo scene, the toolkit is pretty simple to include in your project. You just have to drag and drop the **UDTConsole-Standalone** prefab from the prefab folder inside your scene. 
 Alternatively, use the **UDTConsole-Mobile** for your mobile project (Android/IOS).
 
 ![alt text](../assets/UDTCanvas.png)
 
 Don't forget to remove it for production builds. 
-# Demo Scene Tour
 
 We provide three demo scenes to help you quickly explore and test the features of the toolkit in different contexts:
 
@@ -85,7 +126,7 @@ To use this demo scene just press play. The Console and the all the other featur
     Use the on screen controller to move the character and control the camera.
 
 Each scene is plug-and-play ready—just open the one you need and press Play in the Unity Editor. You can easily customize them or use them as a starting point for your own testing environments.
-# Console
+
 
 The In-game console is the central piece of UDT. It controls every features of the toolkit and more.
 
@@ -162,7 +203,8 @@ Each feature has its family of commands.
 ## Log in the console only
 
 There is an API to log in the in-game console only. Go in the section [Console](apis/console.md) to discover how to use it. Don't forget that the logs from Unity are retargeted to the console anyway.
-# Make your own commands
+
+<div style="page-break-after: always;"></div>
 
 The command system is based on scriptable objects. Scriptables object are really practical to use because they are Gameobject and scene agnostic.
 
@@ -218,7 +260,9 @@ ___
 <strong>Note</strong>
 You can find the existing commands used in the toolkit the 4Hands2Cats/DebugToolkit/Console/Interaction/CommandData folder.
 </div>
-# Static commands
+
+
+<div style="page-break-after: always;"></div>
 
 <div style="border-left: 4px solid #4CAF50; background: #f0fff4; padding: 0.75em 1em; margin: 1em 0;">
   🆕 <strong>Introduced in version 1.2</strong>
@@ -300,7 +344,9 @@ There is no support yet for non-static methods but its doable. If you feel like 
 
 If you are wondering how it works behind the scene don't hesitate to contact us :D
 </div>
-# Command Prediction
+
+
+<div style="page-break-after: always;"></div>
 
 <div style="border-left: 4px solid #4CAF50; background: #f0fff4; padding: 0.75em 1em; margin: 1em 0;">
   🆕 <strong>Introduced in version 1.3</strong>
@@ -319,30 +365,67 @@ When a command is selected it appears in the console, you can either complete it
 
 ![alt text](../assets/Console/ConsoleCommandPrediction.PNG)
 
-# Free Cam
+<div style="page-break-after: always;"></div>
 
-The free cam is here to give you a tool that's similar to the navigation in the scene panel of unity, but at runtime. 
-
-To use type *freecam*/*Freecam* followed by *enable* or *disable* to enable or disable the freecam in the console after opening it using **F12**. 
-
-Though this embeded in the package, the freecam comes as stand alone feature. Feel free to use it for your gameplay if you want. 
-
+The Free Cam provides a runtime navigation tool similar to Unity’s Scene view controls.
 
 <div style="border-left: 4px solid #ffa500; padding: 1em; background: #fff8e1;">
-Future versions of the cam should be compatible with cinemachine.
+🚧 <strong>Future versions</strong> of the Free Cam are planned to support Cinemachine.
 </div>
 
-The prefab for this one is in the same folder as the console.  
+## Where to Find It
 
-![alt text](../assets/FreeCam.png)
+### Instantiation via UD Console
 
-To use as a stand alone feature just drag and drop the prefab in your scene.
+To use it, type `freecam` or `Freecam` followed by `enable` or `disable` in the console after opening it using **F12**.
+
+### Using as a Prefab
+
+Although embedded in the package, the Free Cam is also available as a standalone feature.  
+Feel free to integrate it into your gameplay directly.
+
+The Free Cam prefab is located in the same folder as the console prefab.
+
+![FreeCam Preview](../assets/FreeCam.png)
+
+To use it as a standalone component, just drag and drop the prefab into your scene.
 
 <div style="border-left: 4px solid #ffa500; padding: 1em; background: #fff8e1;">
-<strong>Note</strong>
-If you use it as stand alone feature it'll not be control anymore by the console.
+<strong>Note:</strong> If you use it as a standalone feature, it will no longer be controlled by the console.
 </div>
-# Gizmos
+
+## How to Use It
+
+The controls are similar to those in the Unity Scene view:
+
+- Hold **Right Mouse Button** to enter fly mode.
+- Use **W/S** to move forward/backward (Z axis).
+- Use **A/D** to move left/right (X axis).
+- Use **Q/E** to move down/up (Y axis).
+- Move the mouse to rotate the camera.
+- Hold **Shift** to sprint.
+- Use the **Mouse Scroll Wheel** to adjust speed.
+
+You can also incrementally move forward using the scroll wheel **without** holding the right mouse button.
+
+---
+
+### Customizing Controls
+
+You can easily modify the controls using the `DebugToolkit_IA` (Input Action):
+
+![Input Action Setup](../assets/DebugToolkit_IA.png)
+
+---
+
+### Modifying Parameters
+
+Adjust Free Cam parameters directly on the prefab:
+
+![FreeCam Parameters](../assets/FreeCamParams.png)
+
+<div style="page-break-after: always;"></div>
+
 As you now there is already an API in unity to draw gizmos for debugging purposes. But you cannot draw gizmos for run time. Those gizmos are harvesting the power of the **GL** API to show performance friendly gizmos at runtime for quite anything. 
 
 There are two way of using the gizmos. Manual and automatic using the console. 
@@ -387,7 +470,15 @@ You just have to give it a ref to a gameobject and it'll draw a ray to it and up
 
 ___
 We are planning on adding custom editors in the future to simplify the usage of those features. Please take a look at the section [Gizmos API](../apis/api_gizmos.md) to learn about the code API for the gizmos.
-# Metrics
+
+<div style="page-break-after: always;"></div>
+
+This package aims to both work as a standalone and a part of the Debug toolkit. 
+
+The package is composed of two parts : 
+
+- The metrics that are aim to be able to get live information on your game both in play mode and in editor 
+- The Benchmark that is based on the metrics and allows to collect info in a centralized excel spread sheet.
 
 The metrics are enabled using the interactive console with the command :
 > *metrics*/*Metrics*/*-m*/*-M* followed by *enable*/*e* or *disable*/*d* to enable or disable the metrics.
@@ -429,7 +520,184 @@ You can use the metrics as a stand alone feature by drag and dropping it in your
 <strong>Note</strong>
 If you use the metrics as a standalone feature, it'll not be managed by the console anymore.
 </div>
-# NavMesh Debugging
+
+<div style="page-break-after: always;"></div>
+
+<div style="border-left: 4px solid #4CAF50; background: #f0fff4; padding: 0.75em 1em; margin: 1em 0;">
+  🆕 <strong>Introduced in version 1.42</strong>
+</div>
+
+There is a little of preparation before using this package. On this documentation page you are going to learn how to deploy a web app on your google drive, how to call it using a Unity Web Form, how to link the web app to an excel sheet and how to launch a benchmark in your game. 
+
+-- That's a lot--
+
+-- Don't worry it's going to be Ok -- (~15 min to do the set up)
+
+## Getting the blank sheet
+Just [create a new google sheet](https://docs.google.com/spreadsheets/u/0/), on a google account.
+
+Then copy past this in the first cell of the sheet : 
+Timestamp|SystemSpecs|Category|Name|Mean|Median|Sigma|Min|Max|Unit
+
+![alt text](Image/Excel.png)
+
+Then with the cell selected, go to Data > Separate the text in collumn
+
+![alt text](Image/Separate.png)
+
+Select Personalize  
+
+![alt text](Image/Custom.png)
+
+and enter |.
+
+It should look like that 
+![alt text](Image/ExcelResult.png)
+
+## Setting up the web app
+Congratulation your excel is ready to be used !! 
+
+Now go to Extensions > AppScript 
+
+![alt text](Image/AppScript.png)
+
+It'll get you to a new window. 
+Name your app as you wish and your script as you wish (BenchmarkApp is a great name).
+
+Copy the following .gs script to the script of your web app. 
+
+```js
+function doPost(e) {
+  var SECRET_KEY = "SECRET";
+
+  var ss = SpreadsheetApp.openById("SHEET_ID");
+  var sheet = ss.getSheetByName("BenchResults");
+
+  var data = JSON.parse(e.postData.contents);
+  var timestamp = new Date();
+
+  if (!data.secret || data.secret !== SECRET_KEY) {
+    return ContentService.createTextOutput("Unauthorized").setMimeType(ContentService.MimeType.TEXT);
+  }
+
+  sheet.appendRow([timestamp, data.systemSpecs]);
+
+  data.FrequencySets.forEach(function(item) {
+    sheet.appendRow([
+      "","",
+      "FrequencySets",
+      item.Name,
+      item.meanValue,
+      item.medianValue,
+      item.sigmaValue,
+      item.minValue,
+      item.maxValue,
+      item.Unit
+    ]);
+  });
+
+  data.MemorySets.forEach(function(item) {
+    sheet.appendRow([
+      "", "",
+      "MemorySets",
+      item.Name,
+      item.meanValue,
+      item.medianValue,
+      item.sigmaValue,
+      item.minValue,
+      item.maxValue,
+      item.Unit
+    ]);
+  });
+
+  data.GCSets.forEach(function(item) {
+    sheet.appendRow([
+      "", "",
+      "GCSets",
+      item.Name,
+      item.meanValue,
+      item.medianValue,
+      item.sigmaValue,
+      item.minValue,
+      item.maxValue,
+      item.Unit
+    ]);
+  });
+
+  sheet.appendRow([]);
+
+  return ContentService.createTextOutput("OK");
+}
+```
+
+It should look like that : 
+![alt text](Image/AppPreview.png)
+
+## Binding the spread sheet to the web app
+
+Great job !! 
+You might notice that on the script there is a field called SECRET. Fill it with a random password. We are going to use this secrete later in unity. It is here to add a bit of security to the web app.
+
+Now let's replace the SHEET_ID by the id of your google sheet. 
+You can get this id in the url of your google sheet. 
+Mine is like that 
+![alt text](Image/SheetId.png)
+
+You should have something similar to that on your web app 
+![alt text](Image/WebAppId.png)
+
+## Deploy the web app
+
+Your app is ready for deployment. 
+Just click on the button at the to right of the screen. 
+
+Select new Deployment.
+
+For the App type select : Web App
+For the description enter : Whatever
+For the execute as select : Yourself
+For the access select : everyone
+
+Now click on deploy.
+
+Authorize the access.
+
+Connect with your google account.
+
+You'll get a warning saying google didn't verified the app. Just go in the small underline bottom left "advanced" button and click on "Go to BenchmarkApp(unsafe).
+
+On the next panel click on Allow.
+
+On the next panel you should get a deployment URL. Copy it to safety you are going to need it for later.
+
+## Binding the web app to the unity project
+
+We are almost there !! 
+
+lets get to the debug toolkit in unity. Look for a configuration file (scriptable object) named : "BenchmarkConfig".
+
+Fill your SECRET_KEY and the deployment URL in the SecretKey and the SheetExporterUrl respectively. 
+
+## Using the benchmark tool
+
+Find the prefab UDTBenchMark in the project and drag and drop it to the scene. That's it. (Notice in the Demo scene the prefab is already added).
+
+Now press play. 
+
+In play mode you've got a new button on the bottom right. Just click on it. 
+
+Once the benchmark is finished just take a look at your google sheet. It should have received data (it takes 10 to 30 sec). 
+
+If it didn't ... well contact us on discord :D 
+
+## Customization 
+
+Basically the tool works with a spline. Just find the spline the prefab and change it to customize to your needs.
+
+___ 
+Thanks for using the benchmark package !! 
+If you have any issue or suggestions be our guest and tell us on the discord of the tool !! 
+
 
 This functionality allows to debug the navmesh at runtime. 
 
@@ -450,7 +718,8 @@ This features cannot be used as a standalone yet.
 <strong>Note</strong>
 Do not hesitate to request more features for the navmesh debbuging.
 </div>
-# The Bug Report
+
+<div style="page-break-after: always;"></div>
 
 <div style="border-left: 4px solid #4CAF50; background: #f0fff4; padding: 0.75em 1em; margin: 1em 0;">
   🆕 <strong>Introduced in version 1.3</strong>
@@ -465,7 +734,7 @@ This section is all about guiding you through the process of setting up your pro
 <div style="border-left: 4px solid #ffa500; padding: 1em; background: #fff8e1;">
 As always we listen carefully to your feedbacks and we'd love to improve the feature based on those !! 
 </div>
-# Set up the Trello bug report
+<div style="page-break-after: always;"></div>
 
 <div style="border-left: 4px solid #4CAF50; background: #f0fff4; padding: 0.75em 1em; margin: 1em 0;">
   🆕 <strong>Introduced in version 1.3</strong>
@@ -524,7 +793,8 @@ This is the last step !!
 Name your Workspace, board and the list where the bugs are going to be reported. And press Init trello. You should see some messages in the Unity consol. If you get any error please contact support on the discord.
 
 ![alt text](../assets/BugReport/BoardNaming.png)
-# Set Up the Discord Bug report
+
+<div style="page-break-after: always;"></div>
 
 <div style="border-left: 4px solid #4CAF50; background: #f0fff4; padding: 0.75em 1em; margin: 1em 0;">
   🆕 <strong>Introduced in version 1.4</strong>
@@ -695,7 +965,10 @@ Now launch the scene and test it out. >Reminder : F11 to open the bug report for
   <strong>Note:</strong><br>
 If you encounter any issue please contact support in the discord server.
 </div>
-# Enable the feature
+
+</div>
+
+<div style="page-break-after: always;"></div>
 
 <div style="border-left: 4px solid #4CAF50; background: #f0fff4; padding: 0.75em 1em; margin: 1em 0;">
   🆕 <strong>Introduced in version 1.3</strong>
@@ -712,7 +985,8 @@ There is a dropdown menu of the report manager select the Report Target you've s
 <strong>Note</strong>
 You can change the Trello settings to interact with multiple boards. 
 </div>
-# Report a bug
+
+<div style="page-break-after: always;"></div>
 
 <div style="border-left: 4px solid #4CAF50; background: #f0fff4; padding: 0.75em 1em; margin: 1em 0;">
   🆕 <strong>Introduced in version 1.3</strong>
@@ -725,7 +999,6 @@ Write your description end press the send button.
 That's it. 
 
 If you get errors, or if the card is not created on your Trello, feel free to contact support on the discord.
-# Code APIs
 
 In this section you'll learn how to use the different components of the toolkit in your scripts.
 
@@ -750,7 +1023,8 @@ If you make your own please show them to us, maybe they could be integrated in t
 
 ## Console
 You can use the **DebugLog** API of the in-game console to print logs in the in-game console directly.
-# Collider Gizmos
+
+<div style="page-break-after: always;"></div>
 
 The collider Gizmos is composed of four static method. You can use them anywhere to make your own instances the gizmos, and draw your own shape based on a collider. 
 
@@ -796,7 +1070,8 @@ In addition to this API you can use the **DrawBox** method to repurpose the draw
 ___ 
 > We plan on completing this API with way more functionalities.
 > We also plan to add support for 2d collider support. 
-# RaycastTo Gizmos
+
+<div style="page-break-after: always;"></div>
 
 This component has a simple API for now. 
 Notice that for now it always draw from the position of the drawer to another position. If you need a feature to draw from a selected position to another one, please ask on the discord.
@@ -814,7 +1089,7 @@ Those methods are pretty simple to come around. Either pass a GameObject or a po
         // Logic
     }
 ```
-# Console API
+<div style="page-break-after: always;"></div>
 
 The console has an API that passes through the **DebugLog** static class.
 
@@ -859,14 +1134,19 @@ public static void Log(string message, LogColor logColor = LogColor.Default, Log
 ```
 
 > For know only **int**, **bool** and **string** are supported, but feel free to request more functionalities.
-# About us
 
-At 4Hands2cats, we create debugging tools to streamline development. As two devs (and two cats), we focus on robust, user-friendly solutions for Unity. Our first asset, a complete debug toolkit, works in build and runtime for full control. We're committed to improving and expanding our tools.
+<div style="page-break-after: always;"></div>
+
+
+
 # FAQ
 
 **Where can I contact you to send you feedback or request some features ?**
 
     - Just come on the discord server and ask your question on the dedicated channel.
+
+<div style="page-break-after: always;"></div>
+
 # 🚀 What's Next?
 
 <h2>Usability</h2>
@@ -895,10 +1175,14 @@ At 4Hands2cats, we create debugging tools to streamline development. As two devs
   Our goal is to improve this asset as much as possible so it fulfills all your debugging needs on your Unity Engine journey.
 </p>
 
+<div style="page-break-after: always;"></div>
+
 # 📝 Patch Notes
 <p>This section logs all updates and additions to <strong>UDT</strong> since release.</p>
 
 <hr>
+
+<p>This section logs all updates and additions to <strong>UDT</strong> since release.</p> <hr> <h2>🔷 Version 1.42</h2> <h3>✨ Features</h3> <ul> <li>Benchmark system.</li> <li>Google Sheet export.</li> </ul> <hr> <h2>🔹 Version 1.41</h2> <h3>🔧 Improvements</h3> <ul> <li>Cinemachine 3.0 support.</li> </ul> <h3>🐞 Fixes</h3> <ul> <li>Glitch with the report form.</li> </ul> <hr> <h2>🔷 Version 1.4</h2> <h3>✨ Features</h3> <ul> <li>Mobile support.</li> <li>Discord ticketing.</li> </ul> <h3>🔧 Improvements</h3> <ul> <li>UI button for metrics.</li> </ul> <hr> <h2>🔹 Version 1.31</h2> <h3>✨ Features</h3> <ul> <li>Improves bug report types.</li> <li>Title to bug report.</li> </ul>
 
 <h2>🔷 Version 1.3</h2>
 
@@ -979,3 +1263,7 @@ At 4Hands2cats, we create debugging tools to streamline development. As two devs
   <li>In-game FreeCam.</li>
   <li>Basic metrics system.</li>
 </ul>
+
+
+<div style="page-break-after: always;"></div>
+
