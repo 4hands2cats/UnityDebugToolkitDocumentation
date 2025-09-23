@@ -5,6 +5,6 @@ Access the online doc : https://4hands2cats.github.io/UnityDebugToolkitDocumenta
 
 
 _____ 
-# ESCAPE GAME TOOLKIT DOCUMENTATION
+# Video Player DOCUMENTATION
 
 ____

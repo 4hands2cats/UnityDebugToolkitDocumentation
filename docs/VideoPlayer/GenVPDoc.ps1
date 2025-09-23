@@ -4,7 +4,7 @@ $content = ""
 # Liste des fichiers dans l’ordre
 $files = @(
     "DocuHead.md",
-    "README.md",
+    "README.md"
 )
 
 # Concatène tous les fichiers avec une ligne vide entre eux

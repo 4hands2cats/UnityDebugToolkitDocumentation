@@ -15,6 +15,3 @@ public void LoadVideo(string pickedFile)
 to load a video using its path. 
 
 ___
-
-
-<div style="page-break-after: always;"></div>
