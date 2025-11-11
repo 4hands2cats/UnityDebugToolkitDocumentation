@@ -1,15 +1,3 @@
-
-Join the discord : https://discord.gg/AE6JKG7xnK
-Access the online doc : https://4hands2cats.github.io/UnityDebugToolkitDocumentation/
-
-
-
-
-_____ 
-# Video Player DOCUMENTATION
-
-____
-
 # Video Player
 
 This is a very small asset. It's a video player. 
@@ -27,5 +15,3 @@ public void LoadVideo(string pickedFile)
 to load a video using its path. 
 
 ___
-
-
