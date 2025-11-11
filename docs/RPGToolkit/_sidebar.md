@@ -1,3 +1,3 @@
 - [🏠 Home](/)
 
-- [⚡ BeautifullButtons](BeautifullButtons/BeautifullButtons.md)
+- [⚡ BeautifullButtons](BeautifullUI/BeautifullUI.md)
