@@ -6,6 +6,6 @@ This is going to be in term the biggest and most complete game toolkit on the as
 
 If you bought one of the asset listed bellow : congratulation you are now part of the RPGToolkit ecosystem.
 
-- [⚡ BeautifullButtons](BeautifullButtons/BeautifullButtons.md)
+- [⚡ BeautifullButtons](BeautifullButtons/BeautifullUI.md)
 
 ___

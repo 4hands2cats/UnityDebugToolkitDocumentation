@@ -6,3 +6,4 @@ You might have noticed but on time to time unity UI transforms into a mess. Hier
 In this section you are going to learn how to work with the Beautiful UI framework. 
 
 Keep in mind that the navigation of Beautifull UI is fully customized and compatible with one of Unity. 
+
