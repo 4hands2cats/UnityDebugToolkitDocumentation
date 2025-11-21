@@ -30,6 +30,6 @@ The framework allows to make two colors gradients you can control its orientatio
 
 The button pix size should be the one of your anchored delta size (the ratio is the important thing).
 
-![alt text](image.png)
+![alt text](asset/BB_Shader.png)
 
 Have fun !!
